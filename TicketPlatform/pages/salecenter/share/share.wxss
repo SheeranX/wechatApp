@@ -1,0 +1,54 @@
+/* pages/salecenter/share/share.wxss */
+page{
+  height: 100%;
+}
+.container{
+  height: 100%;
+  overflow: hidden;
+}
+.underline{
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2rpx;
+  border-bottom: 4rpx solid #00a09a;
+}
+.green-color{
+  color: #00a09a;
+}
+.broadcast{
+  width: 100%;
+  background: #fff;
+  height: 100%;
+}
+.broadcast image{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  position: absolute;
+  top: 30rpx;
+  left: 40rpx;
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+.code{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.code image{
+  width: 350rpx;
+  height: 300rpx;
+}
+.share{
+  width: 350rpx;
+  height: 50rpx;
+  border-top: 1rpx solid #000;
+  border-bottom: 1rpx solid #000;
+  padding: 20rpx;
+  position: absolute;
+  font-size: 28rpx;
+  bottom: 40rpx;
+}

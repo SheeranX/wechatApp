@@ -1,0 +1,118 @@
+<view class='container'>
+  <!-- 顶部订单简介 start -->
+  <view class='orderProfile'>
+    <view class='orderId'>
+      <text>订单号：{{orderID}}</text>
+    </view>
+    <view class='onlinePay'>
+      <text>在线支付:\t\t\t</text>
+      <text>￥240</text>
+    </view>
+    <view class='timeLeft'>
+      <view>
+        <text>剩余支付时间：</text>
+      </view>
+      <view>
+        <image src='../../../images/icon_clock.png'></image>
+        <text>{{clock}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 顶部订单简介 end -->
+  <!-- 中间支付选项 start -->
+  <view class='choosePay'>
+    <view class='payicon' bindtap='selectItem' id="wechat">
+      <view>
+        <view class='payImg'>
+          <image src='../../../images/icon_wechat.png'></image>
+        </view>
+        <view class='payInfo'>
+          <text>微信支付</text>
+        </view>
+      </view>
+      <view class='isCheck'>
+        <image src='../../../images/{{currentTabId=="wechat"?"icon_checked":"icon_uncheck"}}.png'></image>
+      </view>
+    </view>
+    <view class='payicon' bindtap='selectItem' id="alipay">
+      <view>
+        <view class='payImg'>
+          <image src='../../../images/icon_alipay.png'></image>
+        </view>
+        <view class='payInfo'>
+          <text>支付宝支付</text>
+        </view>
+      </view>
+      <view class='isCheck'>
+        <image src='../../../images/{{currentTabId=="alipay"?"icon_checked":"icon_uncheck"}}.png'></image>
+      </view>
+    </view>
+    <view class='payicon' bindtap='selectItem' id="bank">
+      <view>
+        <view class='payImg'>
+          <image src='../../../images/icon_bank.png'></image>
+        </view>
+        <view class='payInfo'>
+          <text>银联支付</text>
+        </view>
+      </view>
+      <view class='isCheck'>
+        <image src='../../../images/{{currentTabId=="bank"?"icon_checked":"icon_uncheck"}}.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 中间支付选项 end -->
+  <!-- <view class='loadMore'>
+    <text>更多支付方式\t</text>
+    <image src='../../../images/icon_down.png'></image>
+  </view> -->
+  <!-- 底部支付栏 start-->
+  <view class='payBar'>
+    <view class='leftTotal' bindtap='showDialog'>
+      <text>应付总额：</text>
+      <text>￥240</text>
+      <image src='../../../images/{{isShow?"icon_down":"icon_up"}}.png'></image>
+    </view>
+    <view class='rightBtn'>
+      <text>确认支付</text>
+    </view>
+  </view>
+  <!-- 底部支付栏 end-->
+  <!-- 点击出现弹窗 start -->
+  <view class='dialog{{isShow?"":"hide"}}' bindtap='clickScreen'></view>
+  <view class='dialog_card {{isShow?"":"showDialog"}}'>
+    <view class='dialog_title'>
+      <text>订单明细:</text>
+    </view>
+    <view class='dialog_content'>
+      <view class='itemPay'>
+        <view class='itemName'>
+          门票
+        </view>
+        <view class='itemNum'>
+          <text>￥180</text>
+          <text>x3</text>
+        </view>
+      </view>
+      <view class='itemPay'>
+        <view class='itemName'>
+          门票
+        </view>
+        <view class='itemNum'>
+          <text>￥180</text>
+          <text>x3</text>
+        </view>
+      </view>
+      <view class='itemPay'>
+        <view class='itemName'>
+          门票
+        </view>
+        <view class='itemNum'>
+          <text>￥180</text>
+          <text>x3</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 点击出现弹窗 end -->
+</view>

@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='broadcast'>
+    <image src='../../../images/broadcast.png'></image>
+    <view class='title'>
+      <text class='green-color underline'>sheeran</text> 邀请您加入
+      <text class='green-color underline'>票在路途</text> 全民分销
+    </view>
+    <view class='code'>
+      <image src='../../../images/code.jpg'></image>
+    </view>
+  </view>
+  <view class='share'>
+    长按放给朋友或保存到手机
+  </view>
+</view>

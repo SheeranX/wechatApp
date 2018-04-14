@@ -1,0 +1,49 @@
+/**app.wxss**/
+ @import 'pages/common/lib/weui.wxss';    
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #eeeef7;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  /* overflow: hidden; */
+} 
+.hide{
+  display: none!important;
+  transition: all ease-in .5s;
+}
+button[disabled]{
+  color:#fff!important;
+  opacity:1!important;
+  }
+.warning{
+  color: #ff9c00 !important;
+}
+.danger{
+  color: #ff0000 !important;
+}
+.loginBtn{
+  margin-top: 160rpx;
+}
+.loginBtn button{
+  width: 200rpx;
+  height: 60rpx;
+  border: 1px solid #00a09a;
+  background:none; 
+  color: #00a09a;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+button::after{
+  border: none!important;
+}
+.wired{
+  border-top: 1rpx solid #eeeef7;
+  position: absolute;
+  width: 90%;
+}

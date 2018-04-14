@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/service/service",
+    "pages/personnel/personnel",
+    "pages/personnel/orderDetails/orderDetails",
+    "pages/personnel/orderDetails/selectDate/selectDate",
+    "pages/personnel/setting/setting",
+    "pages/personnel/setting/changeNumber/changeNumber",
+    "pages/personnel/setting/changeName/changeName",
+    "pages/personnel/setting/changeIdcard/changeIdcard",
+    "pages/salecenter/salecenter",
+    "pages/salecenter/share/share",
+    "pages/salecenter/bounsDetails/bounsDetails",
+    "pages/salecenter/bounsDetailsOrder/bounsDetailsOrder",
+    "pages/salecenter/getCashRecord/getCashRecord",
+    "pages/salecenter/shareRule/shareRule",
+    "pages/salecenter/myInvation/myInvation",
+    "pages/salecenter/myInvation/invationDetails/invationDetails",
+    "pages/salecenter/mySaleOrder/mySaleOrder",
+    "pages/logs/logs",
+    "pages/index/ticketDetails/ticketDetails",
+    "pages/index/spot/spot",
+    "pages/index/buyTicket/buyTicket",
+    "pages/index/buyTicket/addPerson/addPerson",
+    "pages/order/orderDetails/orderDetails",
+    "pages/order/pay/pay"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00b8c5",
+    "navigationBarTitleText": "票在旅途",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#00b8c5"
+  }
+}

@@ -1,0 +1,8 @@
+<template name="loading">
+   <view class='loadMore'>
+      <image src='../../images/loading.png' animation="{{animationData}}"></image>
+      <text>拼命加载中...</text> 
+      <!-- hidden='{{isShow}}' -->
+       <text class='hide'>—没有更多了—</text>
+   </view> 
+</template>

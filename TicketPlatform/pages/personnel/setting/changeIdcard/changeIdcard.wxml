@@ -1,0 +1,17 @@
+<view class='container'>
+  <form bindsubmit="formSubmit" class='full-width'>
+    <view class='mobile font28 full-width spacing-padding bg-color'>
+      <view class='flex-row height btm-line'>
+        <view class='label label-width'>
+          身份证
+        </view>
+         <view class='mobileNum spacing-margin-left'>
+          <input type='number' placeholder='请输入证件号' name="mobileNumber"></input>
+        </view>
+      </view>
+    </view>
+    <view class='save spacing-padding'>
+      <button class='saveBtn withe-color font28' formType="submit">保存</button>
+    </view>
+  </form>
+</view>

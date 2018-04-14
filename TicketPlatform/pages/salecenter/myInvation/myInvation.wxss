@@ -1,0 +1,71 @@
+/* pages/salecenter/myInvation/myInvation.wxss */
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.bg-color{
+  background: #fff;
+}
+.gray-color{
+  color: #999;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.enable{
+  border-bottom: 4rpx solid #00a09a;
+  color: #00a09a!important;
+}
+.switch-tab{
+  background: #fff;
+  border-bottom: 1rpx solid #eeeef7;
+}
+.switch-tab view{
+  width: 50%;
+  text-align: center;
+  font-size: 28rpx;
+  border-right: 1rpx solid #f2f2f2;
+  color: #000;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.sale-result{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+  height: 120rpx;
+}
+.portrait{
+  margin-right: 20rpx;
+}
+.portrait image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.sale-item{
+  justify-content:flex-start;
+  border-bottom: 1rpx solid #eeeef7;
+  padding: 10rpx 0rpx;
+}
+.date{
+  justify-content: space-between;
+  flex-basis:200rpx;
+}
+.date image{
+  width: 20rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.saler-info{
+  justify-content:flex-start;
+}
+.saler-details{
+  margin-right: 30rpx;
+}
+

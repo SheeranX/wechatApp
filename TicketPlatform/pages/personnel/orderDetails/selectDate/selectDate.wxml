@@ -1,0 +1,34 @@
+<import src="../../../common/calender/index.wxml"></import>
+<view class='container'>
+  <view class='title font28 full-width bg-white'>
+    <text>日期类型</text>
+  </view>
+  <view class='dateTab flex-row font28 bg-white full-width'>
+    <view class='checkInDate spacing enable '>
+      下单日期
+    </view>
+    <view class='checkInDate spacing'>
+      游玩日期
+    </view>
+  </view>
+  <view class='title font28 full-width bg-white'>
+    <view>日期区间</view>
+    <view class='dateInput flex-row'>
+      <view class='boder-wired spacing-padding'>
+        <input type='text' placeholder='开始时间'  bindtap='startDay' value='{{startdate||""}}' id="startdate"></input>
+      </view>
+      <view class='spacing-margin'> 
+        至
+      </view>
+      <view class='boder-wired spacing-padding'>
+        <input type='text' placeholder='结束时间' bindtap='endDay' value='{{enddate||""}}' id='endDay'></input>
+      </view>
+    </view>
+  </view>
+  <view class='confirm font28 white-color'>
+    确定
+  </view>
+</view>
+<view class="datepicker-box">
+  <template is="datepicker" data="{{...datepicker}}" />
+</view>

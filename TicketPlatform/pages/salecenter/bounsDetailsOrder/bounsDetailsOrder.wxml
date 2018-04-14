@@ -1,0 +1,65 @@
+<view class='container'>
+  <view class='orderDetail'>
+    <view class='orderID'>
+      <text>订单编号\t</text>
+      <text>185555555</text>
+      <text class='payStatus danger'>未支付</text>
+    </view>
+    <view class='orderContent'>
+      <view class='ticketImg'>
+        <image src='../../../images/moutain.jpg'></image>
+      </view>
+      <view class='ticketTitle'>
+        <text>上海海湾国家森林公园\n</text>
+        <text>2018-02-02\t</text>
+        <text>14:02:02\t</text>
+      </view>
+    </view>
+    <view class='ticketsDetails'>
+      <view class='ticketDetailsTitle'>
+        <text class='header'>亲子票</text>
+        <text>有效期</text>
+        <text>2018-05-05\t</text>
+        <text>12:00</text>
+        <text>至</text>
+        <text>2018-07-01\t</text>
+        <text>12:00</text>
+      </view>
+      <view class='ticketsPrice'>
+        <view class='ticketNum used'>
+          <text>x1\n</text>
+          <text class='usedNum warning'>已消费：1张</text>
+        </view>
+        <view class='ticketTotal commonLineHeight'>
+          <text>￥20</text>
+        </view>
+      </view>
+    </view>
+    <view class='totalPriceBar'>
+      <view class='quantity'>
+       <text>共\t</text>
+       <text>6\t</text>
+       <text>件商品</text>
+      </view>
+      <view class='totalPrice'>
+        <text>实付</text>
+        <text>￥15720</text>
+      </view>
+    </view>
+    
+     <view class='operationBtn hide'>
+      <view class='leftBtn'>
+        <button>退票</button>
+      </view>
+      <view class='rightBtn'>
+        <button class='checkCode'>查看入园码</button>
+      </view>
+    </view>
+  </view>
+  <view class='noResult hide'>
+    <view>
+      <image src='../../../images/icon_none.png'></image>
+      <text>这里没有订单哦</text>
+    </view>
+  </view>
+</view>

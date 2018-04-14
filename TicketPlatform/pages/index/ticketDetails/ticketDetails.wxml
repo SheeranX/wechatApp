@@ -1,0 +1,73 @@
+<import src="../../common/tabbar.wxml"></import>
+<!-- <import src="../../common/wxParse/wxParse.wxml"></import> -->
+<view class='container'>
+  <view class='modal {{showShare?"":"hide"}}' bindtap='clickScreen'>
+    <image src='../../../images/share.png'></image>
+  </view>
+  <view class='banner-image'>
+    <image src='../../../images/moutain.jpg'></image>
+    <image src='../../../images/icon_share.png' class='share-icon' bindtap='share'></image>
+  </view>
+  <view class='title'>
+    <text>上海海湾国家森林公园</text>
+    <view class='wired'></view>
+  </view>
+  <view class='address' bindtap='goLocation'>
+    <image src='../../../images/icon_location.png' class="icon_locaiton"></image>
+    <text>上海市浦东新区南六路178号</text>
+    <image class='arrow' src='../../../images/icon_right.png'></image>
+  </view>
+  <view class='selectTab'>
+    <view class='tabItem flex-row'>
+      <view class='{{currentTicketTab==index?"tabActive":""}}' wx:for="{{tabItem}}" wx:key="{{unique}}" data-idx='{{index}}' bindtap='clickTab'>
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='ticketItem' wx:if="{{currentTicketTab==0}}">
+    <view class='outline' wx:for="{{item}}" wx:key="{{key}}">
+      <view class='item-ticket flex-row'>
+      <view class='Ticketdesc'>
+        <text class='header'>{{item.title}}</text>
+        <text class='text-warning24'>￥</text>
+        <text class='text-warning28'>{{item.price}}\t</text>
+        <text class='text-normal'>起\t</text>
+        <text class='text-througn text-normal'>￥{{item.disc}}</text>
+        <text class='text-remind'>购买须知 ></text>
+        <view class='bouns'>
+         <text>最低享佣:￥</text>
+         <text class='font32'>{{item.bouns}}</text>
+        </view>
+      </view>
+      <view class='bookBtn'>
+        <button class='btn' bindtap='bookNow'>立刻预定</button>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class='bookItem desc' wx:if="{{currentTicketTab==1}}">
+    <view class='h3'>
+      <text class='circle'></text>
+      <text>\t免费政策</text>
+      <text class='article'>
+     无论走到哪里，都应该记住，过去都是假的，回忆是一条没有尽头的路，一切以往的春天都不复存在，就连那最坚韧而又狂乱的爱情归根结底也不过是一种转瞬即逝的现实。
+    </text>
+    </view>
+  </view>
+  <view class='spotItem desc' wx:if="{{currentTicketTab==2}}">
+    <view class='h3'>
+      <text class='circle'></text>
+      <text>\t免费政策</text>
+      <text>
+       温柔的黄昏给一切都带上了怀旧的色调，即便是断头台
+     </text>
+    </view>
+  </view>
+  <view class='transItem desc' wx:if="{{currentTicketTab==3}}">
+    <text>
+   很多年以后，奥雷连诺上校站在行刑队面前，准会想起父亲带他去参观冰块的那个遥远的下午。当时，马孔多是个20户人家的村庄，一座座土房都盖在河岸上，河水清澈，沿着遍布石头的河床流去，河里的石头光滑、洁白，活像史前的巨蛋。
+    </text>
+  </view>
+</view>
+<!-- <template is="wxParse" data="{{wxParseData:article.nodes}}"/> -->
+<template is="tabbar" data='{{tabbar,currentTab,root,rootPage}}'></template>

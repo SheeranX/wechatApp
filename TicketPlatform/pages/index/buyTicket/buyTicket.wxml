@@ -1,0 +1,250 @@
+<import src="../../common/datepicker/index.wxml"></import>
+<view class='container'>
+  <view class='title'>
+    <view class='flex-row'>
+      <view class='ticketName'>
+        <text>上海海湾国家森林公园</text>
+      </view>
+      <view class='remind' bindtap='reminder'>
+        <text>购买须知></text>
+      </view>
+    </view>
+    <view class='wired'></view>
+  </view>
+  <view class='usingDate'>
+    <view class='h3'>
+      <text>使用日期</text>
+    </view>
+    <view class='dateCard flex-row'>
+      <view class='item-card' bindtap='showPicker' id='yesterday'>
+        <view class='bgClick {{currentCard==1?"selected":""}}'>
+          <image src='../../../images/icon_choose.png'></image>
+        </view>
+        <view class='date  flex-column'>
+          <text>昨天{{currentMonth}}-{{currentDate-1}}</text>
+          <text>不可订</text>
+        </view>
+      </view>
+      <view class='item-card' bindtap='showPicker' id='today'>
+        <view class='bgClick {{currentCard==2?"selected":""}}'>
+          <image src='../../../images/icon_choose.png'></image>
+        </view>
+        <view class='date flex-column'>
+          <text>今天{{currentMonth}}-{{currentDate}}</text>
+          <text>不可订</text>
+        </view>
+      </view>
+      <view class='item-card' bindtap='showPicker' id='tomorrow'>
+        <view class='bgClick {{currentCard==3?"selected":""}}'>
+          <image src='../../../images/icon_choose.png'></image>
+        </view>
+        <view class='date flex-column'>
+          <text>明天{{currentMonth}}-{{currentDate+1}}</text>
+          <text>￥180</text>
+          <text>享佣:￥120</text>
+        </view>
+      </view>
+      <view class='item-card' bindtap='showPicker' id='future'>
+        <view class='bgClick {{currentCard==4?"selected":""}}'>
+          <image src='../../../images/icon_choose.png'></image>
+        </view>
+        <view class='date flex-column {{currentCard==4?"selected":""}}'>
+          <text>{{date||"更多日期"}}</text>
+          <text>￥180起</text>
+          <text class='arrow'>></text>
+        </view>
+      </view>
+    </view>
+    <view class='wired'></view>
+  </view>
+  <view class='buyNumber'>
+    <view class='flex-row'>
+      <view class='label'>
+        <text>购买数量</text>
+      </view>
+      <view class='plusMinus flex-row'>
+        <view class='miuns' bindtap='minus'>
+          <text class='{{inputValue==1?"disable":""}}'>-</text>
+        </view>
+        <view class='txtNum'>
+          <input class='' type='number' value='{{inputValue}}'></input>
+        </view>
+        <view class='plus' bindtap='plus'>
+          <text>+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='deadline'>
+    <view class='wired'></view>
+    <view>
+      <text>3月29日当日有效</text>
+    </view>
+    <view>
+      <text>此产品在2018年06月27日 00.00前可退款</text>
+    </view>
+  </view>
+  <view class='orderInfo'>
+    <view class='h3 height'>
+      <text>订单信息</text>
+    </view>
+    <!-- <view class='wired'></view>  -->
+    <view class='h3 userInfo line'>
+      <text>取票人信息\n</text>
+      <text>需</text>
+      <text class='warning'>1位</text>
+      <text>出行游客信息，用于取票使用</text>
+    </view>
+    <view class='book'>
+      <form class='bookForm flex-column'>
+        <view class='bookInfo flex-row'>
+          <view class='label'>
+            <text>姓名</text>
+          </view>
+          <view class='txtInput'>
+            <input type='text' placeholder='取票人姓名'></input>
+          </view>
+          <!-- <view class='wired'></view>  -->
+        </view>
+        <view class='bookInfo flex-row'>
+          <view class='label'>
+            <text>身份证</text>
+          </view>
+          <view class='txtInput'>
+            <input type='number' placeholder='用于景区取票使用'></input>
+          </view>
+          <!-- <view class='wired'></view>  -->
+        </view>
+        <view class='bookInfo flex-row'>
+          <view class='label'>
+            <text>手机号</text>
+          </view>
+          <view class='txtInput'>
+            <input type='number' placeholder='用于接收订单信息'></input>
+          </view>
+          <!-- <view class='wired'></view>  -->
+        </view>
+        <view class='bookInfo flex-row'>
+          <view class='label'>
+            <text>备注</text>
+          </view>
+          <view class='txtInput'>
+            <input type='text' placeholder='订单备注'></input>
+          </view>
+          <!-- <view class='wired'></view>  -->
+        </view>
+      </form>
+      <view class='extendInfo'>
+        <text class='h3'>游客信息\n</text>
+        <text class='details'>需填写<text class='warning'> 5 </text>位游客信息,已填写<text class='warning'> {{personInfo.length}} </text>位</text>
+        <button class='addBtn' bindtap='addPerson'>添加出行人</button>
+      </view>
+      <view class='person-group flex-row' wx:for="{{personInfo}}" wx:key="{{key}}">
+        <view class='person-label'>
+          <text>游客{{index}}</text>
+        </view>
+        <view class='person-img' bindtap='removeClick'  data-idx='{{index}}'>
+          <image src='../../../images/{{item.flag?"icon_enable_remove":"icon_remove"}}.png'></image>
+        </view>
+        <view class='txtInfo'>
+          <text>{{item.username}}</text>
+          <text>{{item.idcard}}\t {{item.cardNumber}}</text>
+        </view>
+        <view class='moreArrow'>
+          <view bindtap='modify' class='{{item.flag?"hide":""}}' data-idx='{{index}}'>
+            <image src="../../../images/icon_right.png"></image>
+          </view>
+          <button class='btn-remove {{item.flag?"":"hide"}}' bindtap='removeItem' data-idx='{{index}}'>删除</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='payBar'>
+    <view class='leftTotal' bindtap='showDialog'>
+      <text>应付总额：</text>
+      <text>￥240</text>
+      <image src='../../../images/{{isShow?"icon_down":"icon_up"}}.png'></image>
+    </view>
+    <view class='rightBtn'>
+      <text>确认支付</text>
+    </view>
+  </view>
+  <!-- 点击出现弹窗 start -->
+  <view class='dialog{{isShow||reminder?"":"hide"}}' bindtap='clickScreen'></view>
+  <view class='dialog_card {{isShow?"":"showDialog"}}'>
+    <view class='dialog_title'>
+      <text>订单明细:</text>
+    </view>
+    <view class='dialog_content'>
+      <view class='itemPay'>
+        <view class='itemName'>
+          门票
+        </view>
+        <view class='itemNum'>
+          <text>￥180</text>
+          <text>x3</text>
+        </view>
+      </view>
+      <view class='itemPay'>
+        <view class='itemName'>
+          门票
+        </view>
+        <view class='itemNum'>
+          <text>￥180</text>
+          <text>x3</text>
+        </view>
+      </view>
+      <view class='itemPay'>
+        <view class='itemName'>
+          门票
+        </view>
+        <view class='itemNum'>
+          <text>￥180</text>
+          <text>x3</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 点击出现弹窗 end -->
+  <!-- 购买须知弹窗 -->
+  <view class='reminder-window {{reminder?"":"showDialog"}}'>
+    <view class='reminder-title'>
+      <text>购买须知</text>
+      <view class='close' bindtap='clickScreen'>
+        <image src='../../../images/close_icon.png'></image>
+      </view>
+    </view>
+    <scroll-view scroll-y="true">
+      <view class='remind-desc'>
+        <image src='../../../images/remind_icon.png'></image>
+        <text>费用说明</text>
+        <view class='remind-details'>
+          <text>购买时间：随便你买买买</text>
+          <text>有效期：终生质保</text>
+          <text>购买限制：没钱就别买了</text>
+        </view>
+      </view>
+      <view class='remind-desc'>
+        <image src='../../../images/remind_icon.png'></image>
+        <text>预订说明</text>
+        <view class='remind-details'>
+          <text>购买时间：随便你买买买</text>
+          <text>有效期：终生质保</text>
+          <text>购买限制：没钱就别买了</text>
+        </view>
+      </view>
+      <view class='remind-desc'>
+        <image src='../../../images/remind_icon.png'></image>
+        <text>费用说明</text>
+        <view class='remind-details'>
+          <text>购买时间：随便你买买买</text>
+          <text>有效期：终生质保</text>
+          <text>购买限制：没钱就别买了</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="datepicker-box">
+  <template is="datepicker" data="{{...datepicker}}" />
+</view>

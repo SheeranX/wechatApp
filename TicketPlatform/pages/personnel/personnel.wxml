@@ -1,0 +1,51 @@
+<import src="../common/tabbar.wxml"></import>
+<view class='container'>
+  <view class='personel-header'>
+    <view class='header-banner'>
+      <image src='../../images/mineback.png'></image>
+      <view class='header-alias'>
+        <image src='../../images/icon_alipay.png'></image>
+        <view class='nickName'>
+          <text>sheeran</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='personnel-menu flex-row'>
+    <view class='menu-icon' bindtap='waitPay'>
+      <image src='../../images/icon_paid.png'></image>
+      <view>
+        待付款订单
+      </view>
+    </view>
+    <view class='menu-icon' bindtap='waitUse'>
+      <image src='../../images/icon_pending_order.png'></image>
+      <view>
+        待使用订单
+      </view>
+    </view>
+    <view class='menu-icon' bindtap='historyOrder'>
+      <image src='../../images/icon_history_order.png'></image>
+      <view>
+        历史订单
+      </view>
+    </view>
+  </view>
+  <view class='personnel-sale flex-row' bindtap='saleCenter'>
+    <view class='personnel-icon'>
+      <image src='../../images/icon_sale.png'></image>
+    </view>
+    <view>
+      分销中心
+    </view>
+  </view>
+  <view class='personnel-setting flex-row' bindtap='setting'>
+    <view class='personnel-icon'>
+      <image src='../../images/icon_setting.png'></image>
+    </view>
+    <view>
+      设置
+    </view>
+  </view>
+</view>
+<template is="tabbar" data='{{tabbar,currentTab,root, rootPage}}'></template>

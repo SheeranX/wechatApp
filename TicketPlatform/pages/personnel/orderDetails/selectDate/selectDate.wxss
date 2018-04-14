@@ -1,0 +1,82 @@
+/* pages/personnel/orderDetails/selectDate/selectDate.wxss */
+ @import '../../../common/calender/index.wxss'; 
+page{
+  background: #eeeef7;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.boder-wired{
+  border: 1rpx solid #eeeef7;
+  border-radius: 10rpx;
+}
+.spacing-margin{
+  margin: 0rpx 10rpx;
+}
+.bg-white{
+  background: #fff;
+}
+.full-width{
+  width: 100%;
+}
+.wired{
+  border-top: 1rpx solid #f2f2f2;
+}
+.green-color{
+  color: #00a09a;
+}
+.white-color{
+  color: #fff;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font24{
+  font-size: 28rpx;
+}
+.gray-color{
+  color: #999;
+}
+.spacing{
+  margin-top: 20rpx;
+}
+.spacing-padding{
+  padding: 0rpx 40rpx;
+}
+.enable{
+  background:-webkit-linear-gradient(left,#00b8c5,#008fa4);
+  color: #fff;
+}
+.title{
+  padding: 10rpx 40rpx 10rpx 40rpx;
+  box-sizing: border-box;
+}
+.dateTab view{
+    width: 200rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 5rpx;
+}
+.dateTab{
+   padding: 10rpx 40rpx 20rpx 40rpx;
+   border-bottom: 1rpx solid #eeeef7;
+}
+.dateInput{
+ margin: 30rpx 0rpx 50rpx 0rpx;
+ height: 100rpx;
+}
+.dateInput input{
+  height: 80rpx;
+}
+.confirm{
+   background:-webkit-linear-gradient(left,#00b8c5,#008fa4);
+   height: 100rpx;
+   width: 100%;
+   text-align: center;
+   line-height: 100rpx;
+}

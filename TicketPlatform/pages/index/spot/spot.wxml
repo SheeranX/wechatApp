@@ -1,0 +1,83 @@
+<import src="../../common/tabbar.wxml"></import>
+<import src="../../common/wxParse/wxParse.wxml"></import>
+<view class='container'>
+  <view class='modal {{hide?"":"hide"}}' bindtap='clickModal'></view>
+  <view class='fix-top'>
+    <view class='searchBar'>
+      <view class='flex-row'>
+        <view class='dropDown' bindtap='selectCity'>
+          <text>{{selectCity}}</text>
+          <image src='../../../images/icon_down.png'></image>
+        </view>
+        <view class='searchIcon'>
+          <image src='../../../images/icon_search.png'></image>
+        </view>
+        <view>
+          <input placeholder='搜索景点/关键字' type='text'></input>
+        </view>
+      </view>
+    </view>
+    <view class='typeDrpDown flex-row'>
+      <view class='spotDrp' bindtap='tabSpot'>
+        <text>{{spotTitle}}</text>
+        <text class='arrow'></text>
+      </view>
+      <view class='productDrp' bindtap='tabProd'>
+        <text>{{prodTitle}}</text>
+        <text class='arrow'></text>
+      </view>
+    </view>
+    <view class='dropdownList flex-column {{hide?"":"move"}}'>
+      <view class='spotItem {{currntItem==index?"active":""}} {{tabFlag?"":"hide"}}' id='spot' wx:for="{{typeSpot}}" data-idx='{{index}}' data-value='{{item}}' bindtap='spotChecked' wx:key="{{key}}">
+        <text>{{item}}</text>
+      </view>
+      <view class='spotItem {{currntItem==index?"active":""}} {{tabFlag?"hide":""}}' id='prod' wx:for="{{typeProduct}}" data-idx='{{index}}' data-value='{{item}}' bindtap='prodChecked' wx:key="{{key}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='top-space'></view>
+  <scroll-view scroll-y="true" class='scroll'>
+    <view class='result-item flex-row' wx:for="{{item}}" wx:key="{{unique}}" bindtap='clickTicketItem'>
+      <view class='result-item-img'>
+        <image src='../../../images/{{item.img}}.jpg'></image>
+      </view>
+      <view class='result-desc'>
+        <text>{{item.title}}</text>
+        <text>￥</text>
+        <text>{{item.price}} </text>
+        <text>起\t</text>
+        <text>￥{{item.discount}}</text>
+        <view class='bouns'>
+          <text>最低享佣：</text>
+          <text>￥</text>
+          <text>{{item.bouns}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='bottom-remind'>
+      <text>没有更多了</text>
+    </view>
+  </scroll-view>
+  <view class='picker-modal' bindtap='pickerModalClick' wx:if="{{shwoPicker}}"></view>
+   <view class='region-picker {{shwoPicker?"showpicker":""}}'>
+    <view class='top-bar flex-row'>
+      <view class='picker-cancel' bindtap='clickCancel'>取消</view>
+      <view class='picker-confirm' bindtap='clickConfirm'>
+        <text>确定</text>
+      </view>
+    </view>
+   <view class='PickView'>
+     <picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{selector.provinces}}" style="line-height: 50px" wx:key="{{provinceID}}">{{item.provinceName}}</view>
+      </picker-view-column>
+      <picker-view-column>
+         <view  wx:for="{{selector.provinces[currentCity].citys}}" style="line-height: 50px" wx:key="{{city}}">{{item.citysName}}</view> 
+      </picker-view-column>
+    </picker-view>
+   </view>
+  </view> 
+</view>
+<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+<template is="tabbar" data='{{tabbar,currentTab,root,rootPage}}'></template>

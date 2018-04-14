@@ -1,0 +1,241 @@
+/* pages/index/spot/spot.wxss */
+@import "../../common/tabbar.wxss";
+page{
+  background: #eeeef7;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fix-top{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.active{
+  background: #f7f7f7;
+  color: #00a09a;
+}
+.top-space{
+  width: 100%;
+  height: 160rpx;
+}
+ .arrow{ /*dropdown list triangle */
+  display: inline-block;
+  width: 0rpx;
+  height: 0rpx;
+  border-style: solid;
+  border-width:15rpx;
+  border-color: #ccc transparent transparent transparent; 
+  vertical-align: middle;
+  margin-top: 10rpx;
+  margin-left: 25rpx;
+}
+.move{
+  transform: translateY(-200%);
+  transition: all ease-in 1s;
+  z-index: -1;
+  position: fixed;
+}
+.showpicker{
+  transform: translateY(0%)!important;
+  transition: all ease-in .4s;
+}
+/* 模态框背景图 */
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .3);
+  z-index: 20;
+}
+.picker-modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .3);
+  z-index: 999;
+}
+.dropdownList{
+  width: 100%;
+  background: #fff;
+  align-items: flex-start;
+  font-size: 24rpx;
+  transition: all ease-out .3s;
+  position: fixed;
+  z-index: -2;
+}
+.dropdownList>view{
+  height: 80rpx;
+  padding: 10rpx 40rpx;
+  width: 100%;
+  line-height: 80rpx;
+  border-top: 1rpx solid #ededed;
+}
+
+/* .dropdownList>view:last-child{
+  border-top: 1rpx solid #ededed;
+} */
+.font32{
+  font-size: 32rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.searchBar{
+  width: 100%;
+  background: #00b8c5;
+  height: 80rpx;
+  padding:10rpx 30rpx 0rpx 30rpx;
+  box-sizing: border-box;
+}
+.searchBar>view{
+  height: 60rpx;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+  border-radius: 5rpx;
+  background:rgba(255, 255, 255, .7);
+  padding-left: 30rpx;
+}
+.dropDown{
+  border-right: 1rpx solid #999;
+  padding-right: 25rpx;
+}
+.dropDown image{
+  width: 20rpx;
+  height: 15rpx;
+  margin-left: 20rpx;
+  margin-top: -5rpx;
+}
+.typeDrpDown{
+  text-align: center;
+}
+.spotDrp{
+  width: 50%;
+  border-right: 1rpx solid #ccc;
+}
+.productDrp{
+  width: 50%;
+}
+.searchIcon image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 10rpx 10rpx 5rpx;
+}
+.typeDrpDown{
+  font-size: 24rpx;
+  color: #666;
+  justify-content: space-around;
+  background: #fff;
+  height: 80rpx;
+}
+.scroll{
+  height: 100%;
+  background: #fff;
+}
+.bottom-remind{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 100rpx;
+}
+.result-item{
+  height: 166rpx;
+  color: #3e3e3e;
+  font-size: 28rpx;
+  border-top: 1rpx solid #ccc;
+  padding: 14rpx 20rpx;
+}
+.result-item image{
+  height: 138rpx;
+  width: 210rpx;
+  border-radius: 12rpx;
+  vertical-align: middle;
+}
+.result-desc{
+  padding-left:25rpx;
+}
+.result-desc>text:first-child{
+  display: block;
+}
+.result-desc>text:nth-child(2){
+  font-size: 24rpx;
+  color: #ff9c00;
+}
+.result-desc>text:nth-child(3){
+  font-size: 32rpx;
+  color: #ff9c00;
+}
+.result-desc>text:nth-child(4){
+  font-size: 24rpx;
+  color: #989898;
+}
+.result-desc>text:nth-child(5){
+  font-size: 24rpx;
+  color: #989898;
+  text-decoration: line-through;
+}
+ .bouns{
+  color: #00b8c5;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  height: 100%;
+  right: 20rpx;
+  margin-left: 280rpx;
+  margin-top: -20rpx;
+} 
+.bouns>text:last-child{
+  font-size: 32rpx;
+}
+.region-picker{
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  text-align: center;
+  transform: translateY(160%);
+   transition: all ease-in .4s;
+}
+.top-bar{
+  position: absolute;
+  z-index: 999!important;
+  background: #fff;
+  width: 100%;
+  height: 100rpx;
+  align-items:flex-start;
+  padding: 10rpx 40rpx;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #00b8c5;
+}
+.picker-cancel{
+  width: 100rpx;
+  height: 100rpx;
+  color: #3e3e3e;
+}
+.picker-confirm{
+   width: 100rpx;
+  height: 100rpx;
+}
+.PickView{
+  width: 100%;
+  padding-top: 100rpx;
+}

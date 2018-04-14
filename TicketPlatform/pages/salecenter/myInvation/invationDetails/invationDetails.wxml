@@ -1,0 +1,64 @@
+<view class='container'>
+  <view class='order-details spacing'>
+    <view class='order-title flex-row'  bindtap='bounsOrderDetails'>
+      <view class='order-id'>
+        <text>订单编号\t</text>
+        <text>18555555</text>
+      </view>
+      <view class='order-more-icon'>
+        <image src='../../../../images/icon_more.png'></image>
+      </view>
+    </view>
+    <view class='order-body flex-row'>
+      <view class='body-left'>
+        <view class='flex-row'>
+         <view>
+           <image src='../../../../images/icon_alipay.png'></image>
+         </view>
+         <view>
+           <text>edsheeran \n</text>
+           <text>(AE86)</text>
+         </view>
+        </view>
+      </view>
+      <view class='body-right'>
+        <text>10000.00</text><text class='gray-color'>（待使用）\n</text>
+        <text class='green-color'>享佣：240.00</text><text class='gray-color'>（已审核）</text>
+      </view>
+    </view>
+    <view class='order-footer  gray-color'>
+      2018.04.03 12:13:28
+    </view>
+  </view>
+   <view class='order-details spacing'>
+    <view class='order-title flex-row'>
+      <view class='order-id'>
+        <text>订单编号\t</text>
+        <text>18555555</text>
+      </view>
+      <view class='order-more-icon'>
+        <image src='../../../../images/icon_more.png'></image>
+      </view>
+    </view>
+    <view class='order-body flex-row'>
+      <view class='body-left'>
+        <view class='flex-row'>
+         <view>
+           <image src='../../../../images/icon_alipay.png'></image>
+         </view>
+         <view>
+           <text>edsheeran \n</text>
+           <text>(AE86)</text>
+         </view>
+        </view>
+      </view>
+      <view class='body-right'>
+        <text>10000.00</text><text class='gray-color'>（待使用）\n</text>
+        <text class='green-color'>享佣：240.00</text><text class='gray-color'>（已审核）</text>
+      </view>
+    </view>
+    <view class='order-footer  gray-color'>
+      2018.04.03 12:13:28
+    </view>
+  </view>
+</view>

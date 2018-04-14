@@ -1,0 +1,61 @@
+/* pages/personnel/setting/setting.wxss */
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.flex-column{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+page{
+  background: #eeeef7;
+}
+.spacing-padding{
+  padding: 0rpx 40rpx;
+  box-sizing: border-box;
+}
+.full-width{
+  width: 100%;
+}
+.btm-line{
+  border-bottom: 1rpx solid #f2f2f2;
+  height: 100%;
+}
+.height{
+  height: 100rpx;
+}
+.bg-color{
+  background: #fff;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.gray-color{
+  color: #999;
+}
+.portrait-image{
+  text-align: right;
+}
+.label-right{
+  flex-basis: 300rpx;
+  justify-content: flex-end;
+}
+.label-right image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 20rpx;
+}
+.portrait-image image{
+  width: 60rpx;
+  height: 60rpx;
+}

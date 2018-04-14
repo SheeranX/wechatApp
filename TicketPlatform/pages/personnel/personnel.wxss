@@ -1,0 +1,82 @@
+/* pages/personnel/personnel.wxss */
+@import "../common/tabbar.wxss";
+page{
+  background: #eeeef7;
+}
+.bg-none{
+  background: #fff;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header-banner{
+  width: 100%;
+}
+.personel-header{
+  width: 100%;
+  background: #fff;
+}
+.header-banner image{
+  height: 300rpx;
+  width: 100%;
+  display: block!important;
+}
+.header-alias{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  font-size: 28rpx;
+  text-align: center;
+  color: #fff;
+}
+.header-alias image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.nickName{
+  margin-top: 25rpx;
+}
+.personnel-menu{
+  justify-content: space-around;
+  background: #fff;
+}
+.menu-icon{
+  font-size: 24rpx;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  text-align: center;
+}
+.menu-icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.personnel-icon{
+  margin-right: 20rpx;
+}
+.personnel-icon image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.personnel-sale{
+  font-size: 28rpx;
+  background: #fff;
+  padding-left: 40rpx;
+  margin-top: 30rpx;
+  height: 100rpx;
+
+}
+.personnel-setting{
+  font-size: 28rpx;
+  background: #fff;
+   padding-left: 40rpx;
+    margin-top: 30rpx;
+    height: 100rpx;
+}
+
+

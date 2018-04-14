@@ -1,0 +1,91 @@
+<view class='container'>
+  <view class='sale-tab flex-row'>
+    <view class='tab-item'>
+      <text>￥10，0000</text>
+      <text>已提现佣金</text>
+    </view>
+    <view class='tab-item'>
+      <text>￥10，0000</text>
+      <text>可提现金额</text>
+      <button class='getCash'>全部提现</button>
+    </view>
+    <view class='tab-item'>
+      <text>￥10，0000</text>
+      <text>本月预估佣金</text>
+    </view>
+    <view class='tab-item'>
+      <text>28</text>
+      <text>本月新增分销员</text>
+    </view>
+  </view>
+  <view class='item-list'>
+    <navigator url='bounsDetails/bounsDetails' hover-class="none">
+      <view class='flex-row'>
+        <view class='icon-label'>
+          <image src='../../images/icon-bouns.png'></image>
+          <text>佣金明细</text>
+        </view>
+        <view class='arrow'>
+          <image src='../../images/icon_right.png'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='item-list'>
+    <navigator url='getCashRecord/getCashRecord' hover-class="none">
+      <view class='flex-row'>
+        <view class='icon-label'>
+          <image src='../../images/icon_pay.png'></image>
+          <text>提现记录</text>
+        </view>
+        <view class='arrow'>
+          <image src='../../images/icon_right.png'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='item-list flex-row spacing' bindtap='shareRule'>
+    <view class='flex-row'>
+      <view class='icon-label'>
+        <image src='../../images/icon_rule.png'></image>
+        <text>分享规则</text>
+      </view>
+      <view class='arrow'>
+        <image src='../../images/icon_right.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item-list flex-row' bindtap='share'>
+    <view class='flex-row'>
+      <view class='icon-label'>
+        <image src='../../images/icon_invitation.png'></image>
+        <text>邀请好友</text>
+      </view>
+      <view class='arrow'>
+        <image src='../../images/icon_right.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item-list flex-row' bindtap="invitation">
+    <view class='flex-row'>
+      <view class='icon-label'>
+        <image src='../../images/icon_mail.png'></image>
+        <text>我的邀请</text>
+      </view>
+      <view class='arrow'>
+        <image src='../../images/icon_right.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item-list flex-row spacing' bindtap='mySaleOrder'>
+    <view class='flex-row'>
+      <view class='icon-label'>
+        <image src='../../images/icon-bouns.png'></image>
+        <text>我的分销订单</text>
+      </view>
+      <view class='arrow'>
+        <image src='../../images/icon_right.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

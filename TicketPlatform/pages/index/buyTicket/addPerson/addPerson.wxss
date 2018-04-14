@@ -1,0 +1,63 @@
+/* pages/index/buyTicket/addPerson/addPerson.wxss */
+page{
+  background: #eeeef7;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.addForm{
+  width: 100%;
+}
+.input-group{
+  width: 100%;
+  font-size: 28rpx;
+}
+.input-control{
+  background: #fff;
+  padding: 20rpx 50rpx;
+}
+.input-label{
+  width: 200rpx;
+  color: #3e3e3e;
+}
+.input-box{
+  color: #999;
+}
+.input-box input{
+  width: 350rpx;
+}
+.confirm-btn{
+  margin-top: 180rpx;
+}
+.spacing-top{
+  margin-top: 20rpx;
+}
+.bd-top{
+  border-top: 1rpx solid #eeeef7;
+}
+.confirm-btn button{
+   width: 670rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  background: -webkit-linear-gradient(#0092a6, #00b4c2)!important;
+  color: #fff;
+  border: none!important;
+  letter-spacing: 5rpx;
+}
+.down-arrow{
+  width: 60rpx;
+}
+.down-arrow image{
+  width: 35rpx;
+  height: 20rpx;
+}
+.cardType{
+  font-size: 28rpx;
+}

@@ -1,0 +1,45 @@
+/* pages/salecenter/getCashRecord/getCashRecord.wxss */
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+.btm-line{
+  border-bottom: 1rpx solid #eeeef7;
+}
+.black-color{
+  color: #000;
+}
+.gray-color{
+  color: #666;
+}
+.bg-color{
+  background: #eeeef7;
+}
+.title-height{
+  height: 60rpx;
+}
+.result-height{
+  height: 100rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
+.title{
+  width: 100%;
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.result{
+  width: 100%;
+  padding: 10rpx 20rpx 0rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+}

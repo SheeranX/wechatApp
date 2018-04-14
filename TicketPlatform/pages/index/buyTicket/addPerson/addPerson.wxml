@@ -1,0 +1,56 @@
+<view class='container'>
+  <form class='addForm' bindsubmit='formSubmit'>
+    <view class='input-group'>
+      <view class='input-control spacing-top'>
+        <view class='flex-row'>
+          <view class='input-label'>
+            姓名
+          </view>
+          <view class='input-box'>
+            <input type='text' placeholder='请输入游客姓名' name="username" value='{{personInfo.username}}'></input>
+          </view>
+        </view>
+      </view>
+      <view class='input-control  spacing-top'>
+        <view class='flex-row'>
+          <view class='input-label'>
+            证件类型
+          </view>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{cardType}}" class='cardType'>
+            <view class='flex-row'>
+              <view class='input-box'>
+              <input type='text' placeholder='请选择证件类型' value='{{cardType[index]}}' disabled name="cardType"></input>
+            </view>
+            <view class='down-arrow'>
+              <image src='../../../../images/icon_down.png'></image>
+            </view>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class='input-control bd-top'>
+        <view class='flex-row'>
+          <view class='input-label'>
+            证件号
+          </view>
+          <view class='input-box'>
+            <input type='number' placeholder='请输入证件号码' name="cardNum" value='{{personInfo.cardNumber}}'></input>
+          </view>
+        </view>
+      </view>
+      <view class='input-control spacing-top'>
+        <view class='flex-row'>
+          <view class='input-label'>
+            手机号
+          </view>
+          <view class='input-box'>
+            <input type='number' placeholder='请输入游客手机号(非必填)' name="mobile" value='{{personInfo.phoneNum}}'></input>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='confirm-btn'>
+      <button formType="submit">确定</button>
+    </view>
+  </form>
+</view>

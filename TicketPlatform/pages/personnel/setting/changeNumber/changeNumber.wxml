@@ -1,0 +1,28 @@
+<view class='container'>
+  <form bindsubmit="formSubmit" class='full-width'>
+    <view class='mobile font28 full-width spacing-padding bg-color'>
+      <view class='flex-row height btm-line'>
+        <view class='label label-width'>
+          手机号码
+        </view>
+        <view class='mobileNum spacing-margin-left'>
+          <input type='number' placeholder='请输入新手机号' bindinput='numberInput' name="mobileNumber"></input>
+        </view>
+      </view>
+      <view class='flex-row height btm-line'>
+        <view class='label label-width'>
+          校验码
+        </view>
+        <view class='mobileNum spacing-margin-left'>
+          <input type='number' placeholder='请输入短信校验码' name="valiCode"></input>
+        </view>
+        <view class='sendCode'>
+          <button class='btnCode font24 withe-color' bindtap='sendMessage' disabled='{{disabled}}'>{{getMsg}}</button>
+        </view>
+      </view>
+    </view>
+    <view class='save spacing-padding'>
+      <button class='saveBtn withe-color font28' formType="submit">保存</button>
+    </view>
+  </form>
+</view>

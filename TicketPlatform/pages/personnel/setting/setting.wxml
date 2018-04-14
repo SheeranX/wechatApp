@@ -1,0 +1,58 @@
+<view class='container'>
+  <view class='portrait flex-row bg-color height full-width spacing-padding'>
+    <view class='flex-row btm-line'>
+      <view class='label-left font28'>
+        更换头像
+      </view>
+      <view class='label-right'>
+        <view class='portrait-image'>
+          <image src='../../../images/icon_alipay.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='name flex-row bg-color height full-width spacing-padding' bindtap='changeName'>
+    <view class='flex-row btm-line'>
+      <view class='label-left font28'>
+        姓名
+      </view>
+      <view class='label-right flex-column'>
+        <view class='font24 gray-color'>
+          sheeran
+        </view>
+        <view class='arrow'>
+          <image src='../../../images/icon_right.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='mobile bg-color height full-width spacing-padding'>
+    <view class='flex-row btm-line' bindtap='changeNum'>
+      <view class='label-left font28'>
+        手机号码
+      </view>
+      <view class='label-right flex-column'>
+        <view class='font24 gray-color'>
+          15102321456
+        </view>
+        <view class='arrow'>
+          <image src='../../../images/icon_right.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='idCard flex-row bg-color height full-width spacing-padding' bindtap='changeIDCard'>
+    <view class='flex-row btm-line'>
+      <view class='label-left font28'>
+        身份证
+      </view>
+      <view class='label-right flex-column'>
+        <view>
+        </view>
+        <view class='arrow'>
+          <image src='../../../images/icon_right.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

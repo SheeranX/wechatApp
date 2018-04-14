@@ -1,0 +1,62 @@
+/* pages/personnel/setting/changeNumber/changeNumber.wxss */
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+page{
+  background: #eeeef7;
+}
+.label-width{
+  width: 120rpx;
+}
+.spacing-padding{
+  padding: 0rpx 40rpx;
+  box-sizing: border-box;
+}
+.spacing-margin-left{
+  margin-left: 20rpx;
+}
+.full-width{
+  width: 100%;
+}
+.btm-line{
+  border-bottom: 1rpx solid #f2f2f2;
+  height: 100%;
+}
+.height{
+  height: 100rpx;
+}
+.bg-color{
+  background: #fff;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.gray-color{
+  color: #999;
+}
+.green-color{
+  color: #00a09a;
+}
+.withe-color{
+  color: #fff;
+}
+.btnCode{
+  border-radius: 35rpx;
+  background:-webkit-linear-gradient(left,#00b8c5,#008fa4);
+}
+.save{
+  width: 100%;
+  margin-top: 100rpx;
+}
+.saveBtn{
+  background:-webkit-linear-gradient(left,#00b8c5,#008fa4);
+  border-radius: 40rpx;
+}

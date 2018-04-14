@@ -1,0 +1,66 @@
+<view class='container'>
+  <view class='switch-tab flex-row'>
+    <view class='{{currentTab==1?"enable":""}}' bindtap='firstLevel' data-idx='1'>
+      <text>一级分销</text>
+    </view>
+    <view bindtap='secondLevel' data-idx="2" class='{{currentTab==2?"enable":""}}'>
+      <text>二级分销</text>
+    </view>
+  </view>
+  <view class='sale-result font24 bg-color'>
+    <view class='sale-item flex-row' bindtap='invationDetails'>
+      <view class='saler-info flex-row'>
+        <view class='portrait'>
+          <image src='../../../images/icon_alipay.png'></image>
+        </view>
+        <view class='saler-details'>
+          <text>sheeran x \n</text>
+          <text>会员ID:AE532611</text>
+        </view>
+        <view class='location'>
+          <text>上海</text>
+        </view>
+      </view>
+      <view class='date flex-row'>
+        <text>2018.01.09</text>
+        <image src='../../../images/icon_right.png'></image>
+      </view>
+    </view>
+    <view class='sale-item flex-row'>
+      <view class='saler-info flex-row'>
+        <view class='portrait'>
+          <image src='../../../images/icon_alipay.png'></image>
+        </view>
+        <view class='saler-details'>
+          <text>sheeran x \n</text>
+          <text>会员ID:AE532611</text>
+        </view>
+        <view class='location'>
+          <text>上海</text>
+        </view>
+      </view>
+      <view class='date flex-row'>
+        <text>2018.01.09</text>
+        <image src='../../../images/icon_right.png'></image>
+      </view>
+    </view>
+    <view class='sale-item flex-row'>
+      <view class='saler-info flex-row'>
+        <view class='portrait'>
+          <image src='../../../images/icon_alipay.png'></image>
+        </view>
+        <view class='saler-details'>
+          <text>sheeran x \n</text>
+          <text>会员ID:AE532611</text>
+        </view>
+        <view class='location'>
+          <text>加利福尼亚</text>
+        </view>
+      </view>
+      <view class='date flex-row'>
+        <text>2018.01.09</text>
+        <image src='../../../images/icon_right.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

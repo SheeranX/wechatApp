@@ -1,0 +1,90 @@
+/* pages/salecenter/salecenter.wxss */
+page{
+  background: #eeeef7;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.item-list{
+  width: 100%;
+}
+.item-list .flex-row{
+  height: 100rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.spacing{
+  margin-top: 20rpx;
+}
+.sale-tab {
+  color: #00a09a;
+  font-size: 28rpx;
+  font-weight: 600;
+  text-align: center;
+  padding: 40rpx 20rpx 100rpx 20rpx;
+  justify-content: space-around;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.tab-item{
+  height: 150rpx;
+  border-left: 1rpx solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rpx 10rpx;
+}
+.tab-item text{
+  display: block;
+}
+.tab-item>text:nth-child(2){
+  display: block;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+.tab-item:nth-child(1){
+  border-left: none;
+}
+.getCash-btn{
+  position: absolute;
+}
+.getCash{
+  position: absolute;
+  font-size: 24rpx;
+  font-weight: 500;
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #00a09a;
+  background: #fff;
+  border: 1rpx solid #00a09a;
+  margin-top: 100rpx;
+  margin-left: -1rpx;
+}
+
+.item-list{
+  font-size: 28rpx;
+  color: #000;
+  justify-content: space-between;
+  padding: 0rpx 40rpx;
+  height: 100rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.item-list image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.icon-label image{
+  vertical-align: middle;
+  margin-right: 20rpx;
+  margin-top: -5rpx;
+}
+.arrow image{
+  width: 20rpx;
+  height: 30rpx;
+}

@@ -1,0 +1,32 @@
+
+.tabbar{
+  display: flex;
+  height: 96rpx;
+  width: 100%;
+  padding-top: 10rpx;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 -1rpx 45rpx 3rpx rgba(105, 105, 105, .4);
+  box-sizing: border-box;
+  border: none;
+}
+.tabbar-item{
+  text-align: center;
+  font-size: 18rpx;
+  width: 100rpx;
+  color: #666;
+}
+.tabbar-item image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+.active{
+  color: #00a19b;
+}

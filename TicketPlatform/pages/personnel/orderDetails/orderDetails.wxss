@@ -1,0 +1,269 @@
+/* pages/personnel/orderDetails/orderDetails.wxss */
+page{
+  background: #eeeef7;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.wired{
+  border-top: 1rpx solid #f2f2f2;
+}
+.green-color{
+  color: #00a09a;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font24{
+  font-size: 28rpx;
+}
+.gray-color{
+  color: #999;
+}
+.spacing{
+  margin-top: 20rpx;
+}
+.enable{
+  border-bottom: 4rpx solid #00a09a;
+  color: #00a09a!important;
+}
+.switch-tab{
+  background: #fff;
+  border-bottom: 1rpx solid #eeeef7;
+  box-sizing: border-box;
+}
+.switch-tab view{
+  width: 50%;
+  text-align: center;
+  font-size: 28rpx;
+  border-right: 1rpx solid #f2f2f2;
+  color: #000;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+page{
+  background: #eeeef7;
+}
+
+.caption{
+  width: 100%;
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #666;
+  background: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.loginStatus{
+  position: absolute;
+  right: 40rpx;
+  color: #ff9c00;
+  font-size: 24rpx;
+  font-weight: normal;
+  margin-top: 5rpx;
+}
+.noResult{
+  width: 100%;
+  background: none;
+  height: 100%;
+  text-align: center;
+}
+.noResult image{
+  width: 223rpx;
+  height: 168rpx;
+  margin-top: 200rpx;
+}
+.noResult text{
+  display: block;
+  font-size: 28rpx;
+  color: #bdbdc6;
+  margin: 50rpx auto 200rpx;
+}
+.orderDetail{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.orderDetail>view{
+  border-bottom: 1px solid #f1f1f1;
+  box-sizing: border-box;
+}
+.orderID{
+  font-size: 24rpx;
+  color: #000;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.payStatus{
+  position: absolute;
+  right: 20rpx;
+  font-size: 24rpx;
+  margin-right: 17rpx;
+}
+.orderContent{
+  display: flex;
+  flex-direction: row;
+  height: 140rpx;
+}
+image{
+  height: 84rpx;
+  width: 128rpx;
+  vertical-align: middle;
+}
+.ticketImg{
+  height: 140rpx;
+  padding-top:28rpx;
+
+}
+.ticketTitle{
+  font-size: 24rpx;
+  color: #000;
+  padding-left: 45rpx;
+  line-height:50rpx;
+  font-weight: bold;
+  padding-top:20rpx;
+
+}
+.ticketTitle>text:nth-child(2){
+  font-size: 21rpx;
+  color: #999999;
+  font-weight: normal;
+}
+.ticketTitle>text:nth-child(3){
+  font-size: 21rpx;
+  color: #999999;
+  font-weight: normal;
+}
+.ticketsDetails{
+  height: 100rpx;
+  font-size: 21rpx;
+  display: flex;
+  flex-direction: row;
+  color: #999999;
+  box-sizing: border-box;
+}
+.ticketsDetails>view{
+  flex-grow:1;
+}
+.ticketDetailsTitle{
+  color: #666;
+}
+.ticketDetailsTitle>text:nth-child(1){
+  color: #3e3e3e;
+  font-size: 24rpx;
+  font-weight: bold;
+  display: block;
+  padding: 10rpx 10rpx 15rpx 0rpx;
+}
+.ticketsPrice{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #3e3e3e;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.commonLineHeight{
+  line-height: 100rpx;
+}
+.used{
+  padding-top: 20rpx;
+  text-align: center;
+}
+.usedNum{
+  font-size: 21rpx;
+  font-weight: normal;
+}
+.totalPriceBar{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.quantity{
+  font-size: 21rpx;
+  color: #3e3e3e;
+  box-sizing: border-box;
+  line-height: 140rpx;
+  padding-right: 30rpx;
+}
+.quantity>text:nth-child(2){
+  font-weight: bold;
+}
+.totalPrice{
+  color: #3e3e3e;
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 135rpx;
+}
+.operationBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 20rpx;
+}
+.operationBtn button{
+  height: 46rpx;
+  width: 120rpx;
+  border-radius: 23rpx;
+  background:#fff;
+  border:1px solid #00a09a;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #00a09a;
+}
+ .checkCode{
+  width: 180rpx!important;
+} 
+.operationBtn .leftBtn{
+  margin-right: 26rpx;
+}
+.operationBtn view{
+  border: none;
+}
+.search{
+  width: 100%;
+  padding: 10rpx 40rpx;
+  background: #fff;
+  height: 100rpx;
+}
+.filter-icon{
+  width: 100rpx;
+  text-align: right;
+}
+.filter-icon image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.search-icon {
+  border: 1rpx solid #eeeef7;
+  margin-right: 10rpx;
+  border-radius: 8rpx;
+}
+.search-icon input{
+  width: 100%;
+  font-size: 24rpx;
+}
+.search-icon image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  margin-left: 10rpx;
+}

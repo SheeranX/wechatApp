@@ -1,0 +1,193 @@
+<view class='container'>
+  <view class='switch-tab flex-row font24'>
+    <view class='{{currentTab==1?"enable":""}}' bindtap='waitpay' data-idx='1'>
+      <text>待付款订单</text>
+    </view>
+    <view bindtap='waituse' data-idx="2" class='{{currentTab==2?"enable":""}}'>
+      <text>待使用订单</text>
+    </view>
+    <view bindtap='history' data-idx="3" class='{{currentTab==3?"enable":""}}'>
+      <text>历史订单</text>
+    </view>
+  </view>
+  <view class='search font24 flex-row' wx:if="{{currentTab==1}}">
+    <view class='search-icon flex-row'>
+      <image src='../../../images/icon_search.png'></image>
+      <input type='' placeholder='搜索取票人/手机号码/凭证号/订单号'></input>
+    </view>
+    <view class='filter-icon' bindtap='selectDate'>
+      <image src='../../../images/icon_filter.png'></image>
+    </view>
+  </view>
+  <view class='orderDetail spacing' wx:if="{{currentTab==1}}">
+    <view class='orderID'>
+      <text>订单编号\t</text>
+      <text>185555555</text>
+      <text class='payStatus danger'>未支付</text>
+    </view>
+    <view class='orderContent'>
+      <view class='ticketImg'>
+        <image src='../../../images/moutain.jpg'></image>
+      </view>
+      <view class='ticketTitle'>
+        <text>上海海湾国家森林公园\n</text>
+        <text>2018-02-02\t</text>
+        <text>14:02:02\t</text>
+      </view>
+    </view>
+    <view class='ticketsDetails'>
+      <view class='ticketDetailsTitle'>
+        <text class='header'>亲子票</text>
+        <text>有效期</text>
+        <text>2018-05-05\t</text>
+        <text>12:00</text>
+        <text>至</text>
+        <text>2018-07-01\t</text>
+        <text>12:00</text>
+      </view>
+      <view class='ticketsPrice'>
+        <view class='ticketNum used'>
+          <text>x1\n</text>
+          <text class='usedNum warning'>已消费：1张</text>
+        </view>
+        <view class='ticketTotal commonLineHeight'>
+          <text>￥20</text>
+        </view>
+      </view>
+    </view>
+    <view class='totalPriceBar'>
+      <view class='quantity'>
+        <text>共\t</text>
+        <text>6\t</text>
+        <text>件商品</text>
+      </view>
+      <view class='totalPrice'>
+        <text>实付</text>
+        <text>￥15720</text>
+      </view>
+    </view>
+
+    <view class='operationBtn'>
+      <view class='leftBtn'>
+        <button>支付</button>
+      </view>
+      <view class='rightBtn'>
+        <button class=''>取消</button>
+      </view>
+    </view>
+  </view>
+  <view class='orderDetail spacing' wx:if="{{currentTab==2}}">
+    <view class='orderID'>
+      <text>订单编号\t</text>
+      <text>185555555</text>
+      <text class='payStatus warning'>订票成功</text>
+    </view>
+    <view class='orderContent'>
+      <view class='ticketImg'>
+        <image src='../../../images/moutain.jpg'></image>
+      </view>
+      <view class='ticketTitle'>
+        <text>上海海湾国家森林公园\n</text>
+        <text>2018-02-02\t</text>
+        <text>14:02:02\t</text>
+      </view>
+    </view>
+    <view class='ticketsDetails'>
+      <view class='ticketDetailsTitle'>
+        <text class='header'>亲子票</text>
+        <text>有效期</text>
+        <text>2018-05-05\t</text>
+        <text>12:00</text>
+        <text>至</text>
+        <text>2018-07-01\t</text>
+        <text>12:00</text>
+      </view>
+      <view class='ticketsPrice'>
+        <view class='ticketNum used'>
+          <text>x1\n</text>
+          <text class='usedNum warning'>已消费：1张</text>
+        </view>
+        <view class='ticketTotal commonLineHeight'>
+          <text>￥20</text>
+        </view>
+      </view>
+    </view>
+    <view class='totalPriceBar'>
+      <view class='quantity'>
+        <text>共\t</text>
+        <text>6\t</text>
+        <text>件商品</text>
+      </view>
+      <view class='totalPrice'>
+        <text>实付</text>
+        <text>￥15720</text>
+      </view>
+    </view>
+
+    <view class='operationBtn'>
+      <view class='leftBtn'>
+        <button>退票</button>
+      </view>
+      <view class='rightBtn'>
+        <button class='checkCode'>查看入园码</button>
+      </view>
+    </view>
+  </view>
+  <view class='orderDetail spacing' wx:if="{{currentTab==3}}">
+    <view class='orderID'>
+      <text>订单编号\t</text>
+      <text>185555555</text>
+      <text class='payStatus gray-color'>已完成</text>
+    </view>
+    <view class='orderContent'>
+      <view class='ticketImg'>
+        <image src='../../../images/moutain.jpg'></image>
+      </view>
+      <view class='ticketTitle'>
+        <text>上海海湾国家森林公园\n</text>
+        <text>2018-02-02\t</text>
+        <text>14:02:02\t</text>
+      </view>
+    </view>
+    <view class='ticketsDetails'>
+      <view class='ticketDetailsTitle'>
+        <text class='header'>亲子票</text>
+        <text>有效期</text>
+        <text>2018-05-05\t</text>
+        <text>12:00</text>
+        <text>至</text>
+        <text>2018-07-01\t</text>
+        <text>12:00</text>
+      </view>
+      <view class='ticketsPrice'>
+        <view class='ticketNum used'>
+          <text>x1\n</text>
+          <text class='usedNum warning'>已消费：1张</text>
+        </view>
+        <view class='ticketTotal commonLineHeight'>
+          <text>￥20</text>
+        </view>
+      </view>
+    </view>
+    <view class='totalPriceBar'>
+      <view class='quantity'>
+        <text>共\t</text>
+        <text>6\t</text>
+        <text>件商品</text>
+      </view>
+      <view class='totalPrice'>
+        <text>实付</text>
+        <text>￥15720</text>
+      </view>
+    </view>
+
+    <view class='operationBtn hide'>
+      <view class='leftBtn'>
+        <button>退票</button>
+      </view>
+      <view class='rightBtn'>
+        <button class='checkCode'>查看入园码</button>
+      </view>
+    </view>
+  </view>
+</view>

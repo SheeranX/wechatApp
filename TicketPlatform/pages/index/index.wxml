@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<import src="../common/tabbar.wxml"></import>
+<import src="../common/loading.wxml"></import>
+<view class="container">
+  <!-- swiper begin -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" class='swiper-box' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this" circular="{{circular}}">
+        <swiper-item>
+          <image src='../../images/{{item}}' mode='scaleToFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- swiper end -->
+  <!-- banner icon begin -->
+  <view class='bannerIcon'>
+    <view class='iconLeft'>
+    <view bindtap='goSpot'>
+     <image src='../../images/{{bannerLeft}}'></image>
+    </view>
+    <text>景区</text>
+    </view>
+    <view class='iconRight'>
+    <view bindtap='goSaleCenter'>
+     <image src='../../images/{{bannerRight}}'></image>
+    </view>
+      <text>分销中心</text>
+    </view>
+  </view>
+  <!-- banner icon end  -->
+  <view class='content'>
+    <view class='caption'>
+      <text class='leftLine'>—</text>
+      <text class='centerFont'> 门票特卖 </text>
+      <text class='rightLine'>—</text>
+    </view>
+    <!-- ticket dispaly begin -->
+    <view class='ticketItem'>
+      <view class='item' wx:for="{{ticketItem}}" wx:key="unique">
+        <navigator url='ticketDetails/ticketDetails' open-type='navigate' hover-class>
+          <view class='item-image'>
+            <image src='../../images/{{item.imgUrl}}'></image>
+          </view>
+          <view class='item-text'>
+            <text class='item-title'>{{item.itemTitle}}\n</text>
+            <text>￥</text>
+            <text class='item-price'>{{item.itemPrice}}\t</text>
+            <text>起\t</text>
+            <text class='item-discount'>￥{{item.itemDiscount}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class='{{isVisiable?"":"hide"}}'>
+       <template is="loading" data='{{animationData,isShow}}'></template>
+    </view>
+  </view>
+</view>
+<template is="tabbar" data='{{tabbar,currentTab,root,rootPage}}'></template>

@@ -1,0 +1,22 @@
+<view class='container'>
+  <view class='title'>
+    <view class='flex-row font28 bg-color title-height'>
+      <text>提现金额</text>
+      <text>提现时间</text>
+    </view>
+  </view>
+  <view class='result font24'>
+    <view class='flex-row result-height btm-line'>
+      <text class='black-color font28'>\t ￥1000</text>
+      <text class='gray-color'>\t 2018.04.05 09：22</text>
+    </view>
+     <view class='flex-row result-height btm-line'>
+      <text class='black-color font28'>\t ￥1000</text>
+      <text class='gray-color'>\t 2018.04.05 09：22</text>
+    </view>
+     <view class='flex-row result-height btm-line'>
+      <text class='black-color font28'>\t ￥1000</text>
+      <text class='gray-color'>\t 2018.04.05 09：22</text>
+    </view>
+  </view>
+</view>

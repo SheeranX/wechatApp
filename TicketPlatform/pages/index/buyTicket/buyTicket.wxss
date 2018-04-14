@@ -1,0 +1,447 @@
+/* pages/index/buyTicket/buyTicket.wxss */
+
+@import "../../common/tabbar.wxss";
+@import '../../common/datepicker/index.wxss'; 
+page{
+  background: #eeeef7;
+}
+ view{
+  background: #fff;
+} 
+.height{
+  height: 60rpx;
+}
+.showDatePicker{
+   transform: translateY(0);
+   transition: all 0.4s ease;
+}
+.disable{
+  color: #ccc;
+}
+.selected{
+  border: none!important;
+  background: none!important;
+}
+.line{
+  border-top: 1rpx solid #eeeef7;
+}
+.selected>image{
+  z-index: 2!important;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.title{
+  padding: 10rpx 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  /* border-bottom: 1rpx solid #eeeef7; */
+}
+.title .flex-row{
+   height: 100rpx;
+   justify-content: space-between;
+   line-height: 100rpx;
+}
+.ticketName{
+  color: #3e3e3e;
+  font-size: 24rpx;
+}
+.remind{
+  color: #ff9c00;
+  font-size: 24rpx;
+}
+.usingDate{
+  width: 100%;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box; 
+  height: 260rpx;
+}
+.usingDate .wired{
+  margin-top: 25rpx;
+}
+.h3{
+  font-size: 24rpx;
+  width: 100%;
+}
+.dateCard{
+  width: 100%;
+  padding-top: 15rpx;
+}
+.item-card{
+  margin-right: 10rpx;
+}
+.date{
+  position: absolute;
+  color: #999;
+  font-size: 24rpx;
+  z-index: 5;
+  margin-top: -178rpx;
+  margin-left: 3rpx;
+  height: 160rpx;
+  width: 160rpx;
+  background:none;
+  border-radius: 5rpx;
+  /* box-sizing: border-box; */
+  text-align: center;
+  justify-content: center;
+}
+.date text{
+  display: block;
+}
+.arrow{
+  position: absolute;
+  margin-left: 60rpx;
+}
+.bgClick{
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+  padding: 0rpx;
+  height: 185rpx;
+  width: 165rpx;
+  overflow: hidden;
+  background: none;
+}
+.bgClick image{
+  width: 165rpx;
+  height: 185rpx;
+  margin-left: -1rpx;
+  margin-top: -1rpx;
+   z-index: -1;  
+  position: absolute;
+}
+.buyNumber{
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #000;
+  padding: 0rpx 40rpx;
+  display: flex;
+  align-items: center;
+}
+.buyNumber .flex-row{
+  justify-content: space-between;
+}
+.buyNumber .wired{
+  margin-top: 45rpx;
+}
+.plusMinus{
+  border: 1rpx solid #00a09a;
+  border-radius: 5rpx;
+  justify-content: center; 
+  color: #00a09a;
+  width: 250rpx;
+  height: 68rpx;
+  box-sizing: border-box;
+}    
+.txtNum{
+  box-sizing: border-box;
+  height: 100%;
+}      
+.txtNum input{
+  border-left: 1rpx solid #00a09a;
+  border-right: 1rpx solid #00a09a;
+  width: 100rpx;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+.miuns{
+  width:100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+.plus{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+.deadline{
+  font-size: 24rpx;
+  padding: 0rpx 30rpx 0rpx 30rpx;
+  box-sizing: border-box;
+  height: 100rpx;
+  margin-bottom: 30rpx;
+  color: #999;
+  width: 100%;
+}
+.deadline>view:last-child{
+  color: #ff9c00;
+}
+.deadline>view:nth-child(2){
+  margin-top: 10rpx;
+}
+.orderInfo{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.orderInfo .wired{
+  margin-top: 10rpx;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+.userInfo{
+  color: #999;  
+  height: 100rpx;
+  padding-top: 10rpx;
+}
+.book{
+  width: 100%;
+  margin-bottom: 150rpx;
+}
+.bookForm{
+  font-size: 24rpx;
+  align-items: flex-start;
+  padding: 10rpx 15rpx;
+  background: #fafafc;
+  width: 100%;
+  box-sizing: border-box;
+}
+.bookInfo{
+  width: 100%;
+  background: none;
+  height: 80rpx;
+  box-sizing: border-box;
+}
+.bookInfo view{
+  background: none;
+}
+.bookInfo .wired{
+  width: 90%;
+  position: absolute;
+  margin-left: -5rpx;
+  margin-top: 35rpx;
+}
+ .txtInput{
+  width:100%;
+}
+.label{
+  width: 180rpx;
+} 
+.extendInfo{
+  color: #999;
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.extendInfo .h3{
+  color: #000;
+}
+.details{
+  display: inline-block;
+  width: 100%;
+}
+.addBtn{
+  position: absolute;
+  height: 50rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #00a09a;
+  line-height: 50rpx;
+  background: #fff;
+  color: #00a09a;
+  right: 40rpx;
+  margin-top: -50rpx;
+}
+.payBar{
+  position: fixed;
+  z-index: 101;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+  background: #fff;
+  border-top: 1rpx solid #ccc;
+  height: 100rpx;
+  color: #666;
+  font-size: 28rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.payBar image{
+  width: 32rpx;
+  height: 19rpx;
+  margin-left: 80rpx;
+}
+.leftTotal{
+  width: 450rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  line-height: 80rpx;
+}
+.leftTotal>text:nth-child(2){
+  color:#00a09a;
+}
+.rightBtn{
+  text-align: center;
+  width: 300rpx;
+  background: -webkit-linear-gradient(left, #00b9c6 ,#00a4b5, #008ea3);
+  color: #fff;
+  box-sizing: border-box;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.dialog{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  transform: translateY(0);
+  transition: all 0.4s ease;
+  z-index: 99;
+}
+.dialog_card{
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  bottom: 75rpx; 
+  padding:20rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+.dialog_title{
+  font-size: 28rpx;
+  color: #000;
+  border-bottom: 1rpx solid #ccc;
+  height: 60rpx;
+  box-sizing: border-box;
+}
+.itemPay{
+  height: 100rpx;
+  color: #3e3e3e;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ededed;
+}
+.itemNum>text:first-child{
+  display: inline-block;
+  margin-right: 80rpx;
+}
+ .showDialog{
+  transform: translateY(150%);
+  transition: all 1s ease;
+} 
+.reminder-window {
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 101;
+  bottom: 0rpx; 
+  transition: all 0.5s ease;
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+  font-size: 28rpx; 
+}
+.reminder-window scroll-view{
+  height: 500rpx;
+  width: 100%;
+  padding: 20rpx;
+}
+.reminder-window image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.reminder-title{
+  text-align: center;
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* border-bottom: 1rpx solid #eeeef7; */
+}
+
+.close{
+  position: absolute;
+  right: 40rpx;
+  margin-top: -90rpx;
+  width: 60rpx;
+}
+.remind-details{
+  padding: 0rpx 10rpx;
+  font-size: 24rpx;
+}
+.remind-details>text{
+  display: block;
+}
+.remind-desc{
+  padding:20rpx 0rpx 20rpx 0rpx;
+  border-top: 1rpx solid #eeeef7;
+}
+.person-group{
+  font-size: 24rpx;
+  color: #999;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #eeeef7;
+  padding-left: 10rpx;
+}
+.person-group view{
+  background: none;
+}
+.person-group image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.person-label{
+  width: 70rpx;
+}
+.moreArrow{
+  width: 120rpx;
+  padding-left: 10rpx;
+  text-align: right;
+  position: absolute;
+  right: 50rpx;
+}
+.moreArrow view{
+   width: 120rpx;
+   height: 60rpx;
+   line-height: 60rpx;
+  
+}
+.moreArrow image{
+  width: 20rpx;
+  height: 20rpx;
+}
+/* .txtInfo{
+  width: 320rpx;
+} */
+.txtInfo>text{
+  display: block;
+}
+.person-group{
+  margin-top: 0rpx;
+ background: #fafafc;
+}
+
+.person-img{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.btn-remove{
+  color: #fff;
+  font-size: 24rpx;
+  background: #d81e06;
+  transition: all 0.4s ease
+}
+
