@@ -1,16 +1,16 @@
 <view class='container'>
   <view class='sale-tab flex-row'>
     <view class='tab-item'>
-      <text>￥10，0000</text>
+      <text>￥10,0000</text>
       <text>已提现佣金</text>
     </view>
     <view class='tab-item'>
-      <text>￥10，0000</text>
+      <text>￥10,0000</text>
       <text>可提现金额</text>
-      <button class='getCash'>全部提现</button>
+      <button class='getCash' bindtap='getcash'>全部提现</button>
     </view>
     <view class='tab-item'>
-      <text>￥10，0000</text>
+      <text>￥10,0000</text>
       <text>本月预估佣金</text>
     </view>
     <view class='tab-item'>

@@ -4,10 +4,10 @@
     <text>日期类型</text>
   </view>
   <view class='dateTab flex-row font28 bg-white full-width'>
-    <view class='checkInDate spacing enable '>
+    <view class='checkInDate spacing {{tabFlag=="payDate"?"enable":""}}' bindtap='dateTab' id='payDate'>
       下单日期
     </view>
-    <view class='checkInDate spacing'>
+    <view class='checkInDate spacing {{tabFlag=="travelDate"?"enable":""}}' id='travelDate' bindtap='dateTab'>
       游玩日期
     </view>
   </view>
@@ -25,7 +25,7 @@
       </view>
     </view>
   </view>
-  <view class='confirm font28 white-color'>
+  <view class='confirm font28 white-color' bindtap='confirm'>
     确定
   </view>
 </view>

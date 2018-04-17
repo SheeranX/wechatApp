@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentTab:null
+    currentTab:null,
+    startDate:null,
+    endDate:null,
+    dateType:null
   },
   waitpay: function (e) {
     this.setData({
@@ -27,17 +30,18 @@ Page({
   },
   selectDate:function(){
     wx.navigateTo({
-      url: 'selectDate/selectDate',
+      url: 'selectDate/selectDate?para=' +this.data.currentTab,
     })
-    console.log("---");
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     console.log(options);
+    console.log(options.id);
+    // console.log(Object.prototype.toString(options.id));
     var self = this;
-    switch(options.id)
+    switch (options.id)
     {
       case '1':
         self.setData({
@@ -68,7 +72,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    console.log(this.data);
   },
 
   /**

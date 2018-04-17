@@ -1,12 +1,13 @@
 <import src="../../common/tabbar.wxml"></import>
 <!-- <import src="../../common/wxParse/wxParse.wxml"></import> -->
 <view class='container'>
-  <view class='modal {{showShare?"":"hide"}}' bindtap='clickScreen'>
+  <!-- <view class='modal {{showShare?"":"hide"}}' bindtap='clickScreen'>
     <image src='../../../images/share.png'></image>
-  </view>
+  </view> -->
   <view class='banner-image'>
     <image src='../../../images/moutain.jpg'></image>
-    <image src='../../../images/icon_share.png' class='share-icon' bindtap='share'></image>
+    <image src='../../../images/icon_share.png' class='share-icon'></image> 
+    <button class='shareBtn' plain="true" bindtap='share' open-type='share'></button>
   </view>
   <view class='title'>
     <text>上海海湾国家森林公园</text>

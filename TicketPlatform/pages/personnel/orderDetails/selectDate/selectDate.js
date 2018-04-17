@@ -9,7 +9,15 @@ Page({
   data: {
     flag:null,
     startdate:null,
-    enddate:null
+    enddate:null,
+    tabFlag: "payDate",
+    tabPara:null
+  },
+  dateTab:function(e){
+    this.setData({
+      tabFlag: e.currentTarget.id
+    })
+    console.log(e.currentTarget.id);
   },
   startDay:function(e){
     var self = this;
@@ -33,11 +41,29 @@ Page({
     })
     console.log(e);
   },
+  confirm:function(){
+    var self = this;
+    let pages = getCurrentPages();
+    let prePage = pages[pages.length-2];
+
+    prePage.setData({
+      startDate:self.data.startdate,
+      endDate: self.data.enddate,
+      dateType: self.data.tabFlag
+    })
+    wx.navigateBack({
+      delta:1
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // console.log(options);
+    //   var self = this;
+    //   self.setData({
+    //     tabPara:options.para
+    //   });
   },
 
   /**

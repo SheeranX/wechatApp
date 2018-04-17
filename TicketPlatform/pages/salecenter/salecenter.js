@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    cash:10000
+  },
+  getcash:function(){
+    var self =this;
+    wx.showModal({
+      title: '',
+      content: '确认提现￥' +self.data.cash+'吗？',
+      confirmColor:"#00b8c5",
+      success: function (res) {
+        if (res.confirm) {
+          wx.showToast({
+            title: '提现成功',
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
   shareRule:function(){
     wx.navigateTo({

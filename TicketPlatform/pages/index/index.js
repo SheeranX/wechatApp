@@ -16,7 +16,7 @@ Page({
     interval: 1500,
     duration: 500,
     circular: true,
-    imgUrls: ["banner1.png", "banner2.png", "banner3.png", "banner4.png"],
+    imgUrls: ["banner1.png", "banner1.png", "banner1.png", "banner1.png"],
     bannerLeft: 'banner_icon_left.png',
     bannerRight: 'banner_icon_right.png',
     ticketItem: [
@@ -40,6 +40,9 @@ Page({
   goSpot:function(){
     wx.navigateTo({
       url: 'spot/spot',
+      success:function(){
+        clearInterval(inter);
+      }
     })
   },
   goSaleCenter:function(){

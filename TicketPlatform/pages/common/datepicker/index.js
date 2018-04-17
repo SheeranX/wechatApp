@@ -229,7 +229,8 @@ const conf = {
         [key]: true,
         'datepicker.selectedValue': selectedValue,
         'datepicker.selectedDay': [days[idx]],
-         date: selectedValue
+        'datepicker.showDatePicker': false,
+         date: selectedValue,
       });
     }
   },

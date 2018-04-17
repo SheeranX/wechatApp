@@ -40,10 +40,9 @@
           </view>
 				</view>
 			</view>
-      <view class='confirmBtn'>
-        <!-- <button class='btn white-color'>确定</button> -->
+      <!-- <view class='confirmBtn'>
         <view class='btn white-color' bindtap='getDate'>确定</view>
-      </view>
+      </view> -->
 		</view>
 	</view>
 </template>

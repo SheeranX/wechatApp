@@ -35,7 +35,7 @@
 				{
 					"id": 0,
 					"name": "单页编译",
-					"pathName": "pages/index/buyTicket/buyTicket",
+					"pathName": "pages/personnel/personnel",
 					"query": ""
 				}
 			]

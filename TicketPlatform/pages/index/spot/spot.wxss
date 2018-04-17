@@ -37,7 +37,7 @@ page{
   width: 0rpx;
   height: 0rpx;
   border-style: solid;
-  border-width:15rpx;
+  border-width:10rpx;
   border-color: #ccc transparent transparent transparent; 
   vertical-align: middle;
   margin-top: 10rpx;
@@ -123,9 +123,7 @@ page{
   margin-left: 20rpx;
   margin-top: -5rpx;
 }
-.typeDrpDown{
-  text-align: center;
-}
+
 .spotDrp{
   width: 50%;
   border-right: 1rpx solid #ccc;
@@ -141,9 +139,11 @@ page{
 .typeDrpDown{
   font-size: 24rpx;
   color: #666;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   background: #fff;
   height: 80rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #eeeef7;
 }
 .scroll{
   height: 100%;
@@ -160,7 +160,7 @@ page{
   height: 166rpx;
   color: #3e3e3e;
   font-size: 28rpx;
-  border-top: 1rpx solid #ccc;
+  border-top: 1rpx solid #eeeef7;
   padding: 14rpx 20rpx;
 }
 .result-item image{

@@ -23,7 +23,7 @@ page{
   margin-top: 20rpx;
 }
 .enable{
-  border-bottom: 4rpx solid #00a09a;
+  border-bottom: 4rpx solid #00a09a!important;
   color: #00a09a!important;
 }
 .bouns-header{
@@ -68,6 +68,7 @@ page{
   color: #000;
   height: 80rpx;
   line-height: 80rpx;
+  border-bottom: 4rpx solid #fff;
 }
 .order-title{
   justify-content: space-between;

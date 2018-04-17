@@ -225,7 +225,8 @@ const conf = {
           [key]: true,
           'datepicker.selectedValue': selectedValue,
           'datepicker.selectedDay': [days[idx]],
-           startdate: selectedValue
+           startdate: selectedValue,
+           'datepicker.showDatePicker': false
         });
       }else
       {
@@ -234,7 +235,8 @@ const conf = {
           [key]: true,
           'datepicker.selectedValue': selectedValue,
           'datepicker.selectedDay': [days[idx]],
-           enddate: selectedValue
+           enddate: selectedValue,
+           'datepicker.showDatePicker': false
         });
       }
 		}

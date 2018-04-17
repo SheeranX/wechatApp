@@ -28,13 +28,14 @@ page{
   margin-top: 20rpx;
 }
 .enable{
-  border-bottom: 4rpx solid #00a09a;
+  border-bottom: 4rpx solid #00a09a!important;
   color: #00a09a!important;
 }
 .switch-tab{
   background: #fff;
   border-bottom: 1rpx solid #eeeef7;
-  box-sizing: border-box;
+  box-sizing: content-box!important;
+  overflow: hidden;
 }
 .switch-tab view{
   width: 50%;
@@ -44,6 +45,8 @@ page{
   color: #000;
   height: 80rpx;
   line-height: 80rpx;
+  box-sizing: content-box;
+  border-bottom: 4rpx solid #fff;
 }
 page{
   background: #eeeef7;
@@ -256,6 +259,7 @@ image{
   border: 1rpx solid #eeeef7;
   margin-right: 10rpx;
   border-radius: 8rpx;
+  height:70rpx;
 }
 .search-icon input{
   width: 100%;

@@ -1,4 +1,8 @@
 // pages/index/spot/spot.js
+var QQMapWX = require('../../../utils/qqmap-wx-jssdk.min.js');
+var map = new QQMapWX({
+  key: 'GKTBZ-77Q3J-4BNF3-KAEUZ-CNEMT-M2FQV' // 必填
+});
 var app = getApp();
 Page({
 
@@ -32,7 +36,7 @@ Page({
       province:null,
       currentCity:0,
       shwoPicker:false,
-      selectCity: "上海",
+      selectcity: "上海",
       value:[0,0],
       selector: {
         "provinces": [
@@ -2305,14 +2309,38 @@ Page({
     console.log(cityName);
     this.setData({
       shwoPicker: false,
-      selectCity: cityName.citysName
+      selectcity: cityName.citysName
     });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that = this;
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        console.log(res)
+        map.reverseGeocoder({
+          location: {
+            latitude: res.latitude,
+            longitude: res.longitude
+          },
+          success: function (res) {
+            that.setData({
+              selectcity: res.result.address_component.city
+            });
+          },
+          fail: function (res) {
+            console.log(res);
+            console.log(lat + "+" + lon);
+          },
+          complete: function (res) {
+            console.log(res);
+          }
+        });
+      }
+    })
   },
 
   /**

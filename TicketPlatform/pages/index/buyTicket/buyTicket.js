@@ -158,6 +158,11 @@ Page({
     console.log(self.data.currentCard);
    console.log(self);
   },
+  goPay:function(){
+    wx.navigateTo({
+      url: '../../order/pay/pay?id=1234567',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

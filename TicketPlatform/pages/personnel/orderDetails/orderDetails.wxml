@@ -10,10 +10,10 @@
       <text>历史订单</text>
     </view>
   </view>
-  <view class='search font24 flex-row' wx:if="{{currentTab==1}}">
+  <view class='search font24 flex-row'>
     <view class='search-icon flex-row'>
       <image src='../../../images/icon_search.png'></image>
-      <input type='' placeholder='搜索取票人/手机号码/凭证号/订单号'></input>
+      <input type='' placeholder='搜索取票人/手机号码/凭证号/订单号' disabled='true'></input>
     </view>
     <view class='filter-icon' bindtap='selectDate'>
       <image src='../../../images/icon_filter.png'></image>

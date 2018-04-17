@@ -22,13 +22,13 @@ page{
   margin-top: 20rpx;
 }
 .enable{
-  border-bottom: 4rpx solid #00a09a;
+  border-bottom: 4rpx solid #00a09a!important;
   color: #00a09a!important;
 }
 .bouns-header{
   color: #00a09a;
   font-size: 28rpx;
-  font-weight: 600;
+   font-weight: 600; 
   text-align: center;
   justify-content: space-around;
   background: #fff;
@@ -53,7 +53,7 @@ page{
 .bouns-item>text:last-child{
   display: block;
   font-size: 24rpx;
-  font-weight: 500;
+  font-weight: normal !important;
   color: #999;
 }
 .switch-tab{
@@ -67,6 +67,7 @@ page{
   color: #000;
   height: 80rpx;
   line-height: 80rpx;
+  border-bottom: 4rpx solid #fff;
 }
 .order-title{
   justify-content: space-between;

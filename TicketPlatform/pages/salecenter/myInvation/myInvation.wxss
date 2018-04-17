@@ -19,7 +19,7 @@
   font-size: 24rpx;
 }
 .enable{
-  border-bottom: 4rpx solid #00a09a;
+  border-bottom: 4rpx solid #00a09a!important;
   color: #00a09a!important;
 }
 .switch-tab{
@@ -34,6 +34,7 @@
   color: #000;
   height: 80rpx;
   line-height: 80rpx;
+  border-bottom: 4rpx solid #fff;
 }
 .sale-result{
   width: 100%;

@@ -77,6 +77,15 @@ page
   float: right;
   margin-right: 20%;
 }
+.shareBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120rpx;
+  height: 100rpx;
+  border: none;
+}
+button[plain]{ border:0 }
 .share-icon{
   width: 50rpx;
   height: 50rpx;

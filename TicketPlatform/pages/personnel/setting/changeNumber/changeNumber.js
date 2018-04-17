@@ -92,9 +92,14 @@ Page({
         success: function (res) {
           if (res.confirm) {
            {
-              wx.navigateBack({
-                delta: 1
-              })
+             wx.showToast({
+               title: '修改成功',
+               success:function(){
+                 wx.navigateBack({
+                   delta: 1
+                 })
+               }
+             })
            }
           } else if (res.cancel) {
             console.log('用户点击取消')

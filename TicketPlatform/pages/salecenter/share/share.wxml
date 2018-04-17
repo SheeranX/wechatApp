@@ -1,4 +1,4 @@
-<view class='container'>
+<view class='container'  bindlongpress='createNewImg'>
   <view class='broadcast'>
     <image src='../../../images/broadcast.png'></image>
     <view class='title'>
@@ -10,6 +10,11 @@
     </view>
   </view>
   <view class='share'>
-    长按放给朋友或保存到手机
+    长按发送给朋友或保存到手机
   </view>
 </view>
+<view hidden="{{maskHidden}}" class="mask"></view> 
+<view class='canvas-box'>
+     <canvas style="width:750rpx; height:940rpx;" canvas-id="myCanvas"/>
+     <image src='{{imagePath}}'></image>  
+ </view>

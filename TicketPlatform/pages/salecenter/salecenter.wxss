@@ -44,7 +44,8 @@ page{
 .tab-item>text:nth-child(2){
   display: block;
   font-size: 24rpx;
-  font-weight: 500;
+  font-weight: normal;
+  color: #999;
 }
 .tab-item:nth-child(1){
   border-left: none;
@@ -53,17 +54,17 @@ page{
   position: absolute;
 }
 .getCash{
-  position: absolute;
+   position: absolute; 
   font-size: 24rpx;
   font-weight: 500;
-  width: 160rpx;
+  /* width: 160rpx; */
   height: 40rpx;
   line-height: 40rpx;
   color: #00a09a;
   background: #fff;
   border: 1rpx solid #00a09a;
-  margin-top: 100rpx;
-  margin-left: -1rpx;
+  margin-top: 10%;
+  margin-left: -3rpx;
 }
 
 .item-list{
