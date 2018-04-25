@@ -6,6 +6,7 @@
   width: 100%;
   background:-webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeef7));  
 }
+/* 顶部滑动广告开始 */
 .swiper{
   width: 100%;
   height: 240rpx;
@@ -39,20 +40,39 @@
 .swiper-box .wx-swiper-dot-active::before{
     background:rgba(255,255,255,1);   
 }
+/* 滑动广告结束 */
+
+/* 抽取的一些公共类 */
+.full-width{
+  width: 100%;
+}
+.font24{
+  font-size: 24rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
+.txt-center{
+  text-align: center;
+}
 .banner{
   width:100%;
 }
-.bannerIcon{
-  width: 100%;
+.bg-white-color{
+  background: #fff;
+}
+.flex-row{
   display: flex;
-  justify-content:space-around; 
-  /* align-items: center; */
   flex-direction: row;
+  align-items: center;
+}
+
+/* 中间图标选择 */
+.bannerIcon{
   padding: 30rpx 0rpx 20rpx;
-  text-align: center;
   background: #fff;
   font-weight: 550;
-  /* border-bottom: 20rpx solid #eeeef7; */
+  justify-content:space-around; 
 }
 .bannerIcon view{
   width: 100rpx;
@@ -63,21 +83,17 @@
   /* border-radius: 36rpx; */
 }
 .content{
-  background: #fff;
   margin-top: 20rpx;
   background:-webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeef7));  
 }
  .iconLeft image{
-   text-align: center;
    transform: translate(-2rpx,-2rpx);
 }
 .iconRight image{
-  text-align: center;
   transform: translate(-2rpx,-2rpx);
 } 
 .iconLeft{
   color: #666;
-  font-size: 24rpx;
 }
 .iconLeft>view{
   width: 98rpx;
@@ -88,11 +104,10 @@
   box-shadow: 1px 1px 5px #00118e;
   background: none;
   border: none;
-  margin-bottom: 5rpx;
+  margin-bottom: 10rpx;
 }
 .iconRight{
   color: #666;
-  font-size: 24rpx;
 }
 .iconRight>view{
   width: 98rpx;
@@ -103,11 +118,11 @@
   box-shadow: 1px 1px 5px #91004c;
   background: none;
   border: none;
-  margin-bottom: 5rpx;
+  margin-bottom: 10rpx;
 }
+/* 中间图标结束 */
 .caption{
   margin: 20rpx auto 20rpx;
-  font-size: 28rpx;
   font-weight: bold;
   color: #666;
   display: block;
@@ -115,28 +130,25 @@
   background: #fff;
   width: 100%;
 }
+/* 景区门票列表 */
 .ticketItem{
   width: 100%;
   display: flex;
-  /* justify-content:space-around; */
   flex-direction: row;
   margin:30rpx 0rpx 0rpx 0rpx;
   flex-wrap: wrap;
-  /* background:-webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#eeeef7));  */
 }
 
 .ticketItem .item{
   width: 346rpx;
   height: 330rpx;
-  font-size: 24rpx;
   margin: 10rpx 15rpx;
-  /* border: 1rpx solid #eeeef7; */
   border-radius: 12rpx;
-  background: #fff;
   box-shadow: 1rpx 1rpx 10rpx #eeeef7;
 }
 .item-text{
   padding-left: 10rpx;
+  margin-top: 3%;
 }
 .item-image image{
   width: 346rpx;
@@ -145,7 +157,7 @@
 }
 .ticketItem .item-title{
   color: #3e3e3e;
-  font-weight:600;
+  /* font-weight:600; */
 }
 .item-discount{
   text-decoration: line-through;
@@ -160,7 +172,7 @@
 }
 .item-text text:nth-child(4){
   color: #999;
-  font-size: 18rpx;
+  font-size: 24rpx;
 }
 .item-discount{
   letter-spacing: 4rpx;

@@ -11,19 +11,19 @@
   bottom: 0;
   border-top: 1px solid #ccc;
   background: #fff;
-  box-shadow: 0 -1rpx 45rpx 3rpx rgba(105, 105, 105, .4);
+  /* box-shadow: 0 -1rpx 45rpx 3rpx rgba(105, 105, 105, .4); */
   box-sizing: border-box;
   border: none;
 }
 .tabbar-item{
   text-align: center;
-  font-size: 18rpx;
+  font-size: 20rpx;
   width: 100rpx;
   color: #666;
 }
 .tabbar-item image{
-  width: 40rpx;
-  height: 40rpx;
+  width: 55rpx;
+  height: 55rpx;
   display: block;
   margin: 0 auto;
 }

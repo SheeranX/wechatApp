@@ -16,10 +16,10 @@ page{
   color: #00a09a;
 }
 .font28{
-  font-size: 28rpx;
+  font-size: 28rpx!important;
 }
 .font24{
-  font-size: 28rpx;
+  font-size: 24rpx!important;
 }
 .gray-color{
   color: #999;
@@ -40,7 +40,7 @@ page{
 .switch-tab view{
   width: 50%;
   text-align: center;
-  font-size: 28rpx;
+  /* font-size: 28rpx; */
   border-right: 1rpx solid #f2f2f2;
   color: #000;
   height: 80rpx;
@@ -111,7 +111,6 @@ page{
 .payStatus{
   position: absolute;
   right: 20rpx;
-  font-size: 24rpx;
   margin-right: 17rpx;
 }
 .orderContent{
@@ -130,11 +129,9 @@ image{
 
 }
 .ticketTitle{
-  font-size: 24rpx;
   color: #000;
   padding-left: 45rpx;
   line-height:50rpx;
-  font-weight: bold;
   padding-top:20rpx;
 
 }
@@ -264,6 +261,7 @@ image{
 .search-icon input{
   width: 100%;
   font-size: 24rpx;
+  height: 50rpx;
 }
 .search-icon image{
   width: 40rpx;

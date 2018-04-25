@@ -1,53 +1,56 @@
+<!-- 景区详情页 -->
 <import src="../../common/tabbar.wxml"></import>
 <!-- <import src="../../common/wxParse/wxParse.wxml"></import> -->
 <view class='container'>
-  <!-- <view class='modal {{showShare?"":"hide"}}' bindtap='clickScreen'>
-    <image src='../../../images/share.png'></image>
-  </view> -->
+  <view class='modal {{showShare?"":"hide"}}' bindtap='clickScreen'></view> 
+  <!-- 景区大图 -->
   <view class='banner-image'>
     <image src='../../../images/moutain.jpg'></image>
     <image src='../../../images/icon_share.png' class='share-icon'></image> 
     <button class='shareBtn' plain="true" bindtap='share' open-type='share'></button>
   </view>
-  <view class='title'>
+  <view class='title font32'>
     <text>上海海湾国家森林公园</text>
     <view class='wired'></view>
   </view>
-  <view class='address' bindtap='goLocation'>
+  <view class='address font24' bindtap='goLocation'>
     <image src='../../../images/icon_location.png' class="icon_locaiton"></image>
     <text>上海市浦东新区南六路178号</text>
     <image class='arrow' src='../../../images/icon_right.png'></image>
   </view>
+  <!-- 动态页签切换 -->
   <view class='selectTab'>
-    <view class='tabItem flex-row'>
+    <view class='tabItem flex-row font28'>
       <view class='{{currentTicketTab==index?"tabActive":""}}' wx:for="{{tabItem}}" wx:key="{{unique}}" data-idx='{{index}}' bindtap='clickTab'>
         <text>{{item}}</text>
       </view>
     </view>
   </view>
-  <view class='ticketItem' wx:if="{{currentTicketTab==0}}">
+  <!-- 景点对应门票类别 -->
+  <view class='ticketItem flex-column bg-white-color' wx:if="{{currentTicketTab==0}}">
     <view class='outline' wx:for="{{item}}" wx:key="{{key}}">
-      <view class='item-ticket flex-row'>
+      <view class='item-ticket flex-row bg-white-color'>
       <view class='Ticketdesc'>
-        <text class='header'>{{item.title}}</text>
-        <text class='text-warning24'>￥</text>
-        <text class='text-warning28'>{{item.price}}\t</text>
+        <text class='header font28'>{{item.title}}</text>
+        <text class='warning font24'>￥</text>
+        <text class='warning font28'>{{item.price}}\t</text>
         <text class='text-normal'>起\t</text>
         <text class='text-througn text-normal'>￥{{item.disc}}</text>
-        <text class='text-remind'>购买须知 ></text>
-        <view class='bouns'>
+        <text class='text-remind font24' bindtap='reminder'>购买须知 ></text>
+        <view class='bouns font24'>
          <text>最低享佣:￥</text>
-         <text class='font32'>{{item.bouns}}</text>
+         <text class='font28'>{{item.bouns}}</text>
         </view>
       </view>
       <view class='bookBtn'>
-        <button class='btn' bindtap='bookNow'>立刻预定</button>
+        <button class='btn font24' bindtap='bookNow'>立刻预定</button>
       </view>
     </view>
     </view>
   </view>
+  <!-- 预定须知 -->
   <view class='bookItem desc' wx:if="{{currentTicketTab==1}}">
-    <view class='h3'>
+    <view class='h3 border-top-line'>
       <text class='circle'></text>
       <text>\t免费政策</text>
       <text class='article'>
@@ -56,7 +59,7 @@
     </view>
   </view>
   <view class='spotItem desc' wx:if="{{currentTicketTab==2}}">
-    <view class='h3'>
+    <view class='h3 border-top-line'>
       <text class='circle'></text>
       <text>\t免费政策</text>
       <text>
@@ -64,11 +67,52 @@
      </text>
     </view>
   </view>
+  <!-- 交通指南 -->
   <view class='transItem desc' wx:if="{{currentTicketTab==3}}">
-    <text>
+   <view class='h3 border-top-line'>
+     <text>
    很多年以后，奥雷连诺上校站在行刑队面前，准会想起父亲带他去参观冰块的那个遥远的下午。当时，马孔多是个20户人家的村庄，一座座土房都盖在河岸上，河水清澈，沿着遍布石头的河床流去，河里的石头光滑、洁白，活像史前的巨蛋。
     </text>
+   </view>
   </view>
 </view>
+ <!-- 购买须知弹窗 -->
+  <view class='reminder-window {{showShare?"":"showDialog"}}'>
+    <view class='reminder-title'>
+      <text>购买须知</text>
+      <view class='close' bindtap='clickScreen'>
+        <image src='../../../images/close_icon.png'></image>
+      </view>
+    </view>
+    <scroll-view scroll-y="true">
+      <view class='remind-desc'>
+        <image src='../../../images/remind_icon.png'></image>
+        <text>费用说明</text>
+        <view class='remind-details'>
+          <text>购买时间：随便你买买买</text>
+          <text>有效期：终生质保</text>
+          <text>购买限制：没钱就别买了</text>
+        </view>
+      </view>
+      <view class='remind-desc'>
+        <image src='../../../images/remind_icon.png'></image>
+        <text>预订说明</text>
+        <view class='remind-details'>
+          <text>购买时间：随便你买买买</text>
+          <text>有效期：终生质保</text>
+          <text>购买限制：没钱就别买了</text>
+        </view>
+      </view>
+      <view class='remind-desc'>
+        <image src='../../../images/remind_icon.png'></image>
+        <text>费用说明</text>
+        <view class='remind-details'>
+          <text>购买时间：随便你买买买</text>
+          <text>有效期：终生质保</text>
+          <text>购买限制：没钱就别买了</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
 <!-- <template is="wxParse" data="{{wxParseData:article.nodes}}"/> -->
 <template is="tabbar" data='{{tabbar,currentTab,root,rootPage}}'></template>

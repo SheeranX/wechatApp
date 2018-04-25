@@ -1,5 +1,5 @@
 <view class='container'>
-  <view class='switch-tab flex-row font24'>
+  <view class='switch-tab flex-row font28'>
     <view class='{{currentTab==1?"enable":""}}' bindtap='waitpay' data-idx='1'>
       <text>待付款订单</text>
     </view>
@@ -13,14 +13,14 @@
   <view class='search font24 flex-row'>
     <view class='search-icon flex-row'>
       <image src='../../../images/icon_search.png'></image>
-      <input type='' placeholder='搜索取票人/手机号码/凭证号/订单号' disabled='true'></input>
+      <input type='text' placeholder='搜索取票人/手机号码/凭证号/订单号'></input>
     </view>
     <view class='filter-icon' bindtap='selectDate'>
-      <image src='../../../images/icon_filter.png'></image>
+      <image src='../../../images/{{filtered?"icon_filter_checked":"icon_filter"}}.png'></image>
     </view>
   </view>
   <view class='orderDetail spacing' wx:if="{{currentTab==1}}">
-    <view class='orderID'>
+    <view class='orderID font24'>
       <text>订单编号\t</text>
       <text>185555555</text>
       <text class='payStatus danger'>未支付</text>
@@ -29,7 +29,7 @@
       <view class='ticketImg'>
         <image src='../../../images/moutain.jpg'></image>
       </view>
-      <view class='ticketTitle'>
+      <view class='ticketTitle font28'>
         <text>上海海湾国家森林公园\n</text>
         <text>2018-02-02\t</text>
         <text>14:02:02\t</text>
@@ -77,7 +77,7 @@
     </view>
   </view>
   <view class='orderDetail spacing' wx:if="{{currentTab==2}}">
-    <view class='orderID'>
+    <view class='orderID font24'>
       <text>订单编号\t</text>
       <text>185555555</text>
       <text class='payStatus warning'>订票成功</text>
@@ -86,7 +86,7 @@
       <view class='ticketImg'>
         <image src='../../../images/moutain.jpg'></image>
       </view>
-      <view class='ticketTitle'>
+      <view class='ticketTitle font28'>
         <text>上海海湾国家森林公园\n</text>
         <text>2018-02-02\t</text>
         <text>14:02:02\t</text>
@@ -134,7 +134,7 @@
     </view>
   </view>
   <view class='orderDetail spacing' wx:if="{{currentTab==3}}">
-    <view class='orderID'>
+    <view class='orderID font24'>
       <text>订单编号\t</text>
       <text>185555555</text>
       <text class='payStatus gray-color'>已完成</text>
@@ -143,7 +143,7 @@
       <view class='ticketImg'>
         <image src='../../../images/moutain.jpg'></image>
       </view>
-      <view class='ticketTitle'>
+      <view class='ticketTitle font28'>
         <text>上海海湾国家森林公园\n</text>
         <text>2018-02-02\t</text>
         <text>14:02:02\t</text>

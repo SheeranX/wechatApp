@@ -1,3 +1,4 @@
+<!-- 分销订单详情 -->
 <view class='container'>
   <view class='orderDetail'>
     <view class='orderID'>
@@ -9,7 +10,7 @@
       <view class='ticketImg'>
         <image src='../../../images/moutain.jpg'></image>
       </view>
-      <view class='ticketTitle'>
+      <view class='ticketTitle  font28'>
         <text>上海海湾国家森林公园\n</text>
         <text>2018-02-02\t</text>
         <text>14:02:02\t</text>
@@ -30,13 +31,13 @@
           <text>x1\n</text>
           <text class='usedNum warning'>已消费：1张</text>
         </view>
-        <view class='ticketTotal commonLineHeight'>
+        <view class='ticketTotal commonLineHeight font28'>
           <text>￥20</text>
         </view>
       </view>
     </view>
     <view class='totalPriceBar'>
-      <view class='quantity'>
+      <view class='quantity font24'>
        <text>共\t</text>
        <text>6\t</text>
        <text>件商品</text>

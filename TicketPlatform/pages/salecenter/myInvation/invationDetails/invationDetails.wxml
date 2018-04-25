@@ -1,6 +1,6 @@
 <view class='container'>
   <view class='order-details spacing'>
-    <view class='order-title flex-row'  bindtap='bounsOrderDetails'>
+    <view class='order-title flex-row'  bindtap='bounsOrderDetails' bindtap='goDetails'>
       <view class='order-id'>
         <text>订单编号\t</text>
         <text>18555555</text>

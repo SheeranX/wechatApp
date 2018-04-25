@@ -28,15 +28,16 @@ Page({
       ],
       tabFlag:true,
       typeSpot:["全部景点","乐园","场馆"],
-      typeProduct:["亲子票","成人票","屌丝票","黄牛票"],
-      spotTitle:"景区类型",
-      prodTitle:"产品类型",
-      currntItem:0,
+      typeProduct:["全部产品","亲子票","成人票","屌丝票","黄牛票"],
+      spotTitle:  "景区类型",
+      prodTitle: "产品类型",
+      currntItemSpot:-1,
+      currntItemProd:-1,
       hide:false,
       province:null,
       currentCity:0,
       shwoPicker:false,
-      selectcity: "上海",
+      selectcity: "定位中",
       value:[0,0],
       selector: {
         "provinces": [
@@ -2217,101 +2218,7 @@ Page({
         ]
       }
   },
-  spotChecked:function(e){
-    console.log(e);
-    this.setData({
-      currntItem: e.currentTarget.dataset.idx,
-      spotTitle: e.currentTarget.dataset.value,
-      hide: false,
-      move: false
-    })
-  },
-  prodChecked :function(e){
-    this.setData({
-      currntItem: e.currentTarget.dataset.idx,
-      prodTitle: e.currentTarget.dataset.value,
-      hide: false,
-      move: false
-    })
-  },
-  tabSpot:function(){
-     var self = this;
-     if (!this.data.hide)
-       self.setData({
-         hide: true
-       });
-     else
-       self.setData({
-         hide: false
-       });
-       
-     self.setData({
-       tabFlag:true
-     });
-  },
-  tabProd:function(){
-    var self = this;
-    if(!this.data.hide)
-      self.setData({
-        hide: true
-      });
-      else
-      self.setData({
-        hide: false
-      });
-    self.setData({
-      tabFlag: false
-    });
-  },
-  clickModal:function(){
-   var self = this;
-    self.setData({
-      hide:false,
-      move:false
-    })
-  },
-  clickTicketItem:function(e){
-    wx.navigateTo({
-      url: '../ticketDetails/ticketDetails',
-    })
-  },
-  bindChange:function(e){
-    let val = e.detail.value;
-    this.setData({
-      currentCity:val[0],
-      value:val
-    });
-    console.log(e);
-  },
-  selectCity:function(){
-   this.setData({
-     shwoPicker: true
-   });
-  },
-  pickerModalClick:function(){
-    this.setData({
-      shwoPicker:false
-    });
-  },
-  clickCancel:function(){
-    this.setData({
-      shwoPicker: false
-    });
-  },
-  clickConfirm:function(){
-    let select = this.data.selector
-    let val = this.data.value
-    
-    let proID = val[0];
-    let cityID = val[1];
-    let cityArr = select.provinces[proID].citys
-    let cityName = cityArr[cityID]
-    console.log(cityName);
-    this.setData({
-      shwoPicker: false,
-      selectcity: cityName.citysName
-    });
-  },
+ 
   /**
    * 生命周期函数--监听页面加载
    */
@@ -2355,6 +2262,102 @@ Page({
    */
   onShow: function () {
   
+  },
+  spotChecked: function (e) {
+    console.log(e);
+    this.setData({
+      currntItemSpot: e.currentTarget.dataset.idx,
+      spotTitle: e.currentTarget.dataset.value,
+      hide: false,
+      move: false,
+      
+    })
+  },
+  prodChecked: function (e) {
+    this.setData({
+      currntItemProd: e.currentTarget.dataset.idx,
+      prodTitle: e.currentTarget.dataset.value,
+      hide: false,
+      move: false,
+    })
+  },
+  tabSpot: function (e) {
+    var self = this;
+    if (!self.data.hide)
+      self.setData({
+        hide: true
+      });
+    else
+      self.setData({
+        hide: false
+      });
+
+    self.setData({
+      tabFlag: true
+    });
+  },
+  tabProd: function () {
+    var self = this;
+    if (!self.data.hide)
+      self.setData({
+        hide: true
+      });
+    else
+      self.setData({
+        hide: false
+      });
+    self.setData({
+      tabFlag: false
+    });
+  },
+  clickModal: function () {
+    var self = this;
+    self.setData({
+      hide: false,
+      move: false
+    })
+  },
+  clickTicketItem: function (e) {
+    wx.navigateTo({
+      url: '../ticketDetails/ticketDetails',
+    })
+  },
+  bindChange: function (e) {
+    let val = e.detail.value;
+    this.setData({
+      currentCity: val[0],
+      value: val
+    });
+    console.log(e);
+  },
+  selectCity: function () {
+    this.setData({
+      shwoPicker: true
+    });
+  },
+  pickerModalClick: function () {
+    this.setData({
+      shwoPicker: false
+    });
+  },
+  clickCancel: function () {
+    this.setData({
+      shwoPicker: false
+    });
+  },
+  clickConfirm: function () {
+    let select = this.data.selector
+    let val = this.data.value
+
+    let proID = val[0];
+    let cityID = val[1];
+    let cityArr = select.provinces[proID].citys
+    let cityName = cityArr[cityID]
+    console.log(cityName);
+    this.setData({
+      shwoPicker: false,
+      selectcity: cityName.citysName
+    });
   },
 
   /**

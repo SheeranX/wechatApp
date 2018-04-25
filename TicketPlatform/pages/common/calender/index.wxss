@@ -2,7 +2,9 @@
 .box {
 	display: flex;
 }
-
+.move{
+  transform: translateY(0%)!important;
+}
 .box-lr {
 	flex-direction: row;
 }
@@ -174,7 +176,7 @@
 	width: 60rpx;
 	height: 60rpx;
 	color: #000;
-	font-size: 18rpx;
+	font-size: 28rpx;
 	font-weight: 500; 
 }
 /* .day text{
@@ -323,7 +325,7 @@
   bottom: 0;
   z-index: 501;
   transition: all 0.4s ease;
-  /* transform: translateY(150%);   */
+  transform: translateY(150%);   
 }
 
 .box {

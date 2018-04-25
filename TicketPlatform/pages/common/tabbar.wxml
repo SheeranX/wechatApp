@@ -1,7 +1,7 @@
 <template name="tabbar">
   <view class='tabbar'>
     <view class='tabbar-item' wx:for="{{tabbar}}" data-idx="{{index}}" wx:key="{{item.id}}">
-    <navigator url="{{rootPage}}/{{item.id}}/{{item.id}}" open-type='redirectTo' hover-stop-propagation="true" hover-class>
+    <navigator url="{{rootPage}}/{{item.id}}/{{item.id}}" open-type='reLaunch' hover-stop-propagation="true" hover-class>
        <image src='{{root}}/images/{{currentTab==index?item.icon+"_hover":item.icon}}.png'></image>
        <text class='{{currentTab==index?"active":""}}'>{{item.name}}</text>
     </navigator>

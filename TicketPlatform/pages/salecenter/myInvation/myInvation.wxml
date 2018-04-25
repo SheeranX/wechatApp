@@ -1,5 +1,7 @@
+<!-- 我的邀请页 -->
 <view class='container'>
-  <view class='switch-tab flex-row'>
+<!-- 顶部tab栏切换 -->
+  <view class='switch-tab flex-row font28'>
     <view class='{{currentTab==1?"enable":""}}' bindtap='firstLevel' data-idx='1'>
       <text>一级分销</text>
     </view>
@@ -14,7 +16,7 @@
           <image src='../../../images/icon_alipay.png'></image>
         </view>
         <view class='saler-details'>
-          <text>sheeran x \n</text>
+          <text class='font28'>sheeran x \n</text>
           <text>会员ID:AE532611</text>
         </view>
         <view class='location'>
@@ -32,7 +34,7 @@
           <image src='../../../images/icon_alipay.png'></image>
         </view>
         <view class='saler-details'>
-          <text>sheeran x \n</text>
+          <text class='font28'>sheeran x \n</text>
           <text>会员ID:AE532611</text>
         </view>
         <view class='location'>
@@ -50,7 +52,7 @@
           <image src='../../../images/icon_alipay.png'></image>
         </view>
         <view class='saler-details'>
-          <text>sheeran x \n</text>
+          <text class='font28'>sheeran x \n</text>
           <text>会员ID:AE532611</text>
         </view>
         <view class='location'>

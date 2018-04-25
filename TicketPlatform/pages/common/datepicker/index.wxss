@@ -2,7 +2,12 @@
 .box {
 	display: flex;
 }
-
+.font20{
+  font-size: 20rpx;
+}
+.font18{
+  font-size: 18rpx;
+}
 .box-lr {
 	flex-direction: row;
 }
@@ -188,7 +193,9 @@
 	top: 0;
 	color: #fff;
 }
-
+.move{
+  transform: translateY(0%)!important;
+}
 .pink-bg {
 	  background: -webkit-linear-gradient(left, #00b9c6 ,#00a4b5, #008ea3);
 }
@@ -324,7 +331,7 @@
   bottom: 0;
   z-index: 501;
   transition: all 0.4s ease;
-  /* transform: translateY(150%);   */
+  transform: translateY(150%);   
 }
 
 .box {

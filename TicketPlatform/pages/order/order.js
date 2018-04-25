@@ -115,10 +115,11 @@ Page({
       isHide:false
     })
   },
+  // 发送短信
   sendMessage:function(){
     var self = this;
     var time = 60;
-    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;//验证手机格式
       if (!myreg.test(self.data.phoneNum))
     {
       wx.showToast({

@@ -49,7 +49,8 @@ Page({
     prePage.setData({
       startDate:self.data.startdate,
       endDate: self.data.enddate,
-      dateType: self.data.tabFlag
+      dateType: self.data.tabFlag,
+      filtered:true
     })
     wx.navigateBack({
       delta:1

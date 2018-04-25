@@ -1,5 +1,4 @@
-/* pages/index/buyTicket/buyTicket.wxss */
-
+/* pages/index/buyTicket/buyTicket.wxss */ 
 @import "../../common/tabbar.wxss";
 @import '../../common/datepicker/index.wxss'; 
 page{
@@ -14,6 +13,9 @@ page{
 .showDatePicker{
    transform: translateY(0);
    transition: all 0.4s ease;
+}
+.black-color{
+  color: #3e3e3e;
 }
 .disable{
   color: #ccc;
@@ -48,6 +50,18 @@ page{
   box-sizing: border-box;
   /* border-bottom: 1rpx solid #eeeef7; */
 }
+.green-color{
+  color: #00b8c5;
+}
+.font32{
+  font-size: 32rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
 .title .flex-row{
    height: 100rpx;
    justify-content: space-between;
@@ -55,11 +69,9 @@ page{
 }
 .ticketName{
   color: #3e3e3e;
-  font-size: 24rpx;
 }
 .remind{
   color: #ff9c00;
-  font-size: 24rpx;
 }
 .usingDate{
   width: 100%;
@@ -204,7 +216,6 @@ page{
   margin-bottom: 150rpx;
 }
 .bookForm{
-  font-size: 24rpx;
   align-items: flex-start;
   padding: 10rpx 15rpx;
   background: #fafafc;
@@ -248,7 +259,6 @@ page{
 .addBtn{
   position: absolute;
   height: 50rpx;
-  font-size: 24rpx;
   border: 1rpx solid #00a09a;
   line-height: 50rpx;
   background: #fff;
@@ -355,7 +365,7 @@ page{
   font-size: 28rpx; 
 }
 .reminder-window scroll-view{
-  height: 500rpx;
+  height: 70%;
   width: 100%;
   padding: 20rpx;
 }
@@ -383,6 +393,7 @@ page{
 }
 .remind-details>text{
   display: block;
+  margin-top: 20rpx;
 }
 .remind-desc{
   padding:20rpx 0rpx 20rpx 0rpx;

@@ -1,3 +1,6 @@
  <view class='container'>
- I am the ruler , welcome gamer
+  <image src='../../../images/invation_bg.png'></image>
+  <view class='article'> 
+    money on my mind
+  </view>
  </view>

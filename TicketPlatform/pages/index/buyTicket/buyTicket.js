@@ -11,10 +11,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // tabbar: app.globalData.tarbar,
-    // currentTab: 0,
-    // root: '../../..',
-    // rootPage: '../..',
     isShow:false,
     reminder:false,
     inputValue:1,
@@ -23,7 +19,7 @@ Page({
     date:null,
     currentMonth: currentMonth,
     currentDate: currentDate,
-    currentCard:2,
+    currentCard:3,
   },
   showDialog: function () {
     var self = this;
@@ -36,7 +32,6 @@ Page({
         isShow: true
       })
     }
-    // console.log(self.data.isShow);
   },
   clickScreen: function () {
     this.setData({
@@ -93,6 +88,7 @@ Page({
     wx.showModal({
       title: '',
       content: '确定删除？',
+      confirmColor:"#00b8c5",
       success: function (res) {
         if (res.confirm) {
           {

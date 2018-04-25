@@ -1,6 +1,6 @@
 <view class='container'>
   <form class='addForm' bindsubmit='formSubmit'>
-    <view class='input-group'>
+    <view class='input-group font28'>
       <view class='input-control spacing-top'>
         <view class='flex-row'>
           <view class='input-label'>
@@ -50,7 +50,7 @@
       </view>
     </view>
     <view class='confirm-btn'>
-      <button formType="submit">确定</button>
+      <button formType="submit" class='font28'>确定</button>
     </view>
   </form>
 </view>

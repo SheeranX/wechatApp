@@ -11,7 +11,7 @@ page{
   background: #eeeef7;
 }
 .label-width{
-  width: 120rpx;
+  width: 140rpx;
 }
 .spacing-padding{
   padding: 0rpx 40rpx;
@@ -51,6 +51,7 @@ page{
 .btnCode{
   border-radius: 35rpx;
   background:-webkit-linear-gradient(left,#00b8c5,#008fa4);
+  width: 180rpx;
 }
 .save{
   width: 100%;

@@ -29,7 +29,6 @@
 .switch-tab view{
   width: 50%;
   text-align: center;
-  font-size: 28rpx;
   border-right: 1rpx solid #f2f2f2;
   color: #000;
   height: 80rpx;
@@ -39,8 +38,8 @@
 .sale-result{
   width: 100%;
   box-sizing: border-box;
-  padding: 20rpx 40rpx;
-  height: 120rpx;
+  padding: 15rpx 40rpx;
+  height: 130rpx;
 }
 .portrait{
   margin-right: 20rpx;

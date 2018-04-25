@@ -8,16 +8,16 @@
 		type="text"
 		bindinput="onInputDate"
 		bindfocus="showDatepicker"/> -->
-	<view wx:if="{{showDatePicker}}" class="datepicker-wrap flex box box-tb box-align-center {{showDatePicker?'showDatePicker':''}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+	<view class="datepicker-wrap flex box box-tb box-align-center {{showDatePicker?'showDatePicker move':''}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
 		<view class="calendar pink-color box box-tb">
-       <view class='fs24 spaceing'><text>使用日期</text></view> 
+       <view class='fs28 spaceing'><text>使用日期</text></view> 
 			<view class="top-handle fs28 box box-lr box-align-center box-pack-center">
 				<view class="prev box box-rl" catchtap="handleCalendar" data-handle="prev">
 					<view class="prev-handle box box-lr box-align-center box-pack-center">
              <image src='../../../images/icon_left.png'></image> 
           </view>
 				</view>
-				<view class="date-area box box-lr box-align-center box-pack-center">
+				<view class="date-area box box-lr box-align-center box-pack-center fs28">
           {{curYear || "--"}} 年 {{curMonth || "--"}} 月
         </view>
 				<view class="next box box-lr" catchtap="handleCalendar" data-handle="next">
@@ -34,9 +34,9 @@
 				</view>
 				<view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" catchtap="tapDayItem">
 					<view class="day {{item.flag?(item.choosed?'border-radius pink-bg':'') : 'disable-color'}} box box-align-center box-pack-center box-tb">
-           <text> {{item.day}}</text>
-           <text class='{{item.choosed?"":"price-color"}}' wx:if="{{item.flag}}">￥240</text>
-           <text class='warning {{item.choosed?"yellow-color":""}}' wx:if="{{item.flag}}">余128</text>
+           <text class='font28'> {{item.day}}</text>
+           <text class='{{item.choosed?"":"price-color"}} font20' wx:if="{{item.flag}}">￥240</text>
+           <text class='warning {{item.choosed?"yellow-color":""}} font18' wx:if="{{item.flag}}">余128</text>
           </view>
 				</view>
 			</view>

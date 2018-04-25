@@ -13,6 +13,9 @@ page
   color: #666;
   font-size: 24rpx;
 }
+.border-top-line{
+  border-top: 1rpx solid #eeeef7;
+}
 .circle{
   display: inline-block;
   width: 15rpx;
@@ -20,23 +23,38 @@ page
   border-radius: 50%;
   background: #00b8c5;
 }
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
 .outline{
   width: 100%;
   box-sizing: border-box;
   border-top: 1rpx solid #eeeef7;
 }
 .tabActive{
-   border-bottom: 6rpx solid #00a09a;
-   color: #00a09a;
+   border-bottom: 6rpx solid #00b8c5!important;
+   color: #00b8c5;
 }
 .header{
   color: #3e3e3e;
   font-size: 24rpx;
   display: block;
 }
-.text-warning24{
+.font24{
   font-size: 24rpx;
-  color: #ff9c00;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font32{
+  font-size: 32rpx;
+}
+.bg-white-color{
+  background: #fff;
+}
+.txt-center{
+  text-align: center;
 }
 .text-normal{
   font-size: 24rpx;
@@ -49,13 +67,12 @@ page
   font-size: 28rpx;
   color: #ff9c00;
 }
-.font32{
-  font-size: 32rpx;
-}
+
 .text-remind{
   color: #666;
-  font-size: 21rpx;
   display: block;
+  margin-top:15rpx;
+
 }
 .flex-row{
   display: flex;
@@ -69,7 +86,7 @@ page
   height: 100%;
   position: fixed;
   background: rgba(0, 0, 0, .7);
-  z-index: 999;
+  z-index: 22;
 }
 .modal image{
   width: 200rpx;
@@ -105,7 +122,6 @@ button[plain]{ border:0 }
   width: 100%;
   height: 100rpx;
   background: #fff;
-  font-size: 28rpx;
   padding: 0 40rpx 0 60rpx;
   box-sizing: border-box;
   line-height: 100rpx;
@@ -122,18 +138,15 @@ button[plain]{ border:0 }
   width: 100%;
   color: #666;
   height: 100rpx;
-  font-size: 24rpx;
   box-sizing: border-box;
   padding: 0rpx 40rpx 0rpx 60rpx;
   background: #fff;
-  /* border-top: 1rpx solid #ccc; */
   line-height: 100rpx;
 }
 .icon_locaiton{
-  width: 40rpx;
-  height: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
   vertical-align: middle;
-  /* margin-right: 20rpx; */
   margin-top: -5rpx;
 }
 .arrow{
@@ -153,44 +166,44 @@ button[plain]{ border:0 }
   margin-top: 20rpx;
 }
 .tabItem{
-  font-size: 24rpx;
   color: #3e3e3e;
   justify-content: space-around;
   height: 80rpx;
   box-sizing: border-box;
 }
 .tabItem>view{
-  width: 100rpx;
+  width: 150rpx;
   text-align: center;
+  border-bottom: 6rpx solid #fff;
 }
 .item-ticket{
   width: 100%;
   height: 175rpx;
-  background: #fff;
-  /* padding: 20rpx 40rpx;  */
   justify-content: space-around;
   align-items: center;
 }
 .bouns{
-  color: #00a09a;
-  font-size: 24rpx;
-  /* width: 200rpx; */
+  color: #00b8c5;
   position: absolute;
-  margin-top: -6%;
+  margin-top: -5%;
   margin-left: 35%;
 }
 .Ticketdesc{
    width:70%; 
    min-width: 250rpx;
 }
-
+.bookBtn{
+  height: 175rpx;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5%;
+}
 .bookBtn .btn{
-  font-size: 24rpx;
   /* width: 160rpx; */
   height: 50rpx;
   line-height: 50rpx;
   color: #fff;
-  background: #00a09a;
+  background: #00b8c5;
 }
 .ticketItem{
   width: 100%;
@@ -199,7 +212,6 @@ button[plain]{ border:0 }
   flex-direction: column;
   margin-bottom: 80rpx;
   padding: 0rpx 40rpx;  
-  background: #fff; 
 }
 .ticketItem .wired{
   margin-top: -85rpx;
@@ -211,4 +223,55 @@ button[plain]{ border:0 }
   box-sizing: border-box;
   margin-bottom: 80rpx;
 }
+.reminder-window {
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 101;
+  bottom: 0rpx; 
+  transition: all 0.5s ease;
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+  font-size: 28rpx; 
+}
+.reminder-window scroll-view{
+  height: 800rpx;
+  width: 100%;
+  padding: 20rpx;
+}
+.reminder-window image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.reminder-title{
+  text-align: center;
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* border-bottom: 1rpx solid #eeeef7; */
+}
+
+.close{
+  position: absolute;
+  right: 40rpx;
+  margin-top: -90rpx;
+  width: 60rpx;
+}
+.remind-details{
+  padding: 0rpx 10rpx;
+  font-size: 24rpx;
+}
+.remind-details>text{
+  display: block;
+  margin-top: 10rpx;
+}
+.remind-desc{
+  padding:20rpx 0rpx 20rpx 0rpx;
+  border-top: 1rpx solid #eeeef7;
+}
+ .showDialog{
+  transform: translateY(150%);
+  transition: all 1s ease;
+} 
 

@@ -6,7 +6,7 @@
           身份证
         </view>
          <view class='mobileNum spacing-margin-left'>
-          <input type='number' placeholder='请输入证件号' name="mobileNumber"></input>
+          <input type='idcard' placeholder='请输入证件号' name="mobileNumber"></input>
         </view>
       </view>
     </view>

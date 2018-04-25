@@ -1,21 +1,22 @@
 <import src="../common/tabbar.wxml"></import>
 <view class='container'>
-  <view class='caption'>
+  <view class='caption font28'>
     <text>订单查询</text>
   </view>
-  <view class='loginStatus'>
+  <view class='loginStatus font28 warning'>
     <text>未登录</text>
   </view>
-  <view class='switchTab'>
-    <view class='byMobile {{isHide?"click":"unclick"}}' bindtap='switchMobile'>
+  <view class='switchTab font28'>
+    <view class='byMobile {{isHide?"click":"unclick"}} txt-center' bindtap='switchMobile'>
       <text>手机号查询</text>
     </view>
-    <view class='byNumber {{isHide?"unclick":"click"}}' bindtap='switchNum'>
+    <view class='byNumber {{isHide?"unclick":"click"}}  txt-center' bindtap='switchNum'>
       <text>凭证号查询</text>
     </view>
   </view>
+  <!-- 根据手机号查询 -->
   <form class='queryByMobile query {{isHide?"":"hide"}}' bindsubmit="formSubmit">
-    <view class='phoneNum query-flex'>
+    <view class='phoneNum query-flex flex-row'>
       <view class='icon_mobile'>
         <image src='../../images/mobile_icon.png'></image>
       </view>
@@ -23,7 +24,7 @@
         <input type='number' placeholder="请输入取票人手机号" placeholder-class='placeHolderStyle' bindinput='numberInput' name="queryByMobileInput" ></input>
       </view>
     </view>
-    <view class='messageCode query-flex'>
+    <view class='messageCode query-flex flex-row'>
       <view class='icon_meaasge'>
         <image src='../../images/block.png'></image>
       </view>
@@ -31,10 +32,10 @@
         <input type='number' placeholder='请输入短信动态码' placeholder-class='placeHolderStyle' bindinput='messageInput' name="queryByMsgInput"></input>
       </view>
       <view class='messageBtn'>
-        <button bindtap='sendMessage' disabled="{{disabled}}">{{getMsg}}</button>
+        <button bindtap='sendMessage' class='font28' disabled="{{disabled}}">{{getMsg}}</button>
       </view>
     </view>
-    <view class='valiCode query-flex'>
+    <view class='valiCode query-flex flex-row'>
       <view class='icon_valiCode'>
         <image src='../../images/block_guard.png'></image>
       </view>
@@ -46,11 +47,12 @@
       </view>
     </view>
     <view class='searchOrder'>
-      <button class='enableBtn' formType="submit" >查询订单</button>
+      <button class='enableBtn font28' formType="submit">查询订单</button>
     </view>
   </form>
+  <!-- 根据凭证号查询 -->
   <form class='queryByNum query {{isHide?"hide":""}}' bindsubmit="formSubmitById">
-    <view class='queryByNum query-flex'>
+    <view class='queryByNum query-flex flex-row'>
       <view class='icon_mobile'>
         <image src='../../images/mobile_icon.png'></image>
       </view>
@@ -58,7 +60,7 @@
         <input type='number' placeholder="请输入取票人手机号" placeholder-class='placeHolderStyle' bindinput='inputByNumTab' name="queryByIdInput"></input>
       </view>
     </view>
-    <view class='valiCode query-flex'>
+    <view class='valiCode query-flex flex-row'>
       <view class='icon_valiCode'>
         <image src='../../images/block_guard.png'></image>
       </view>
@@ -70,11 +72,11 @@
       </view>
     </view>
     <view class='searchOrder'>
-      <button class='enableBtn' formType="submit">查询订单</button>
+      <button class='enableBtn font28' formType="submit">查询订单</button>
     </view>
   </form>
   <view class='loginBtn'>
-    <button>我要登录</button>
+    <button class='font28'>我要登录</button>
   </view>
-  <template is="tabbar" data='{{tabbar,currentTab,root, rootPage}}'></template>
+  <!-- <template is="tabbar" data='{{tabbar,currentTab,root, rootPage}}'></template> -->
 </view>

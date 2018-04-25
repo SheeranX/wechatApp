@@ -13,6 +13,12 @@ page{
   display: flex;
   justify-content: center;
 }
+.font24{
+  font-size: 24rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
 .loginStatus{
   position: absolute;
   right: 40rpx;
@@ -79,12 +85,10 @@ image{
 
 }
 .ticketTitle{
-  font-size: 24rpx;
   color: #000;
   padding-left: 45rpx;
   line-height:50rpx;
-  font-weight: bold;
-  padding-top:20rpx;
+  padding-top:20rpx; 
 
 }
 .ticketTitle>text:nth-child(2){
@@ -125,8 +129,9 @@ image{
   justify-content: space-between;
   color: #3e3e3e;
   font-size: 24rpx;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
+
 .commonLineHeight{
   line-height: 100rpx;
 }
@@ -146,7 +151,6 @@ image{
 }
 
 .quantity{
-  font-size: 21rpx;
   color: #3e3e3e;
   box-sizing: border-box;
   line-height: 140rpx;
@@ -157,8 +161,8 @@ image{
 }
 .totalPrice{
   color: #3e3e3e;
-  font-size: 24rpx;
-  font-weight: bold;
+  font-size: 28rpx;
+  /* font-weight: bold; */
   line-height: 135rpx;
 }
 .operationBtn{

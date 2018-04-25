@@ -8,7 +8,7 @@
 		type="text"
 		bindinput="onInputDate"
 		bindfocus="showDatepicker"/>  -->
-  <view wx:if="{{showDatePicker}}" class="datepicker-wrap flex box box-tb box-align-center" bindtouchstart="touchstart" bindtouchmove="touchmove">
+  <view class="datepicker-wrap flex box box-tb box-align-center {{showDatePicker?'showDatePicker move':''}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
     <view class="calendar pink-color box box-tb">
       <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
         <view class="prev box box-rl" catchtap="handleCalendar" data-handle="prev">

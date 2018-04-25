@@ -88,7 +88,7 @@ const conf = {
     for (let i = 1; i <= thisMonthDays; i++) {
       days.push({
         day: i,
-        choosed: curDate ? (i === curDate) : (year === selectYear && month === selectMonth && i === day),
+        choosed: curDate? (i === curDate) : (year === selectYear && month === selectMonth && i === day),
         year,
         month,
         flag: (month >flagMonth ) ? (month>flagMonth+1?false:true) :(month==flagMonth?(i>=flagDay):false)
@@ -211,6 +211,7 @@ const conf = {
     }
   },
   tapDayItem(e) {
+    var self = this;
     const idx = e.currentTarget.dataset.idx;
     const { curYear, curMonth, days } = this.data.datepicker;
     const key = `datepicker.days[${idx}].choosed`;

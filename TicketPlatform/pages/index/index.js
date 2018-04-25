@@ -31,25 +31,6 @@ Page({
     root:'../..',
     rootPage:'..'
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  goSpot:function(){
-    wx.navigateTo({
-      url: 'spot/spot',
-      success:function(){
-        clearInterval(inter);
-      }
-    })
-  },
-  goSaleCenter:function(){
-    wx.navigateTo({
-      url: '../salecenter/salecenter',
-    })
-  },
   onLoad: function () {
     var animation = wx.createAnimation({
       duration: 500,
@@ -114,6 +95,7 @@ Page({
     }, 1000)
   },
   onShow: function () {
+    console.log(app.globalData.userInfo);
   },
   onShareAppMessage:function(){
     return {
@@ -121,5 +103,24 @@ Page({
       desc: '票在旅途',
       path: '/page/user?id=123'
     }
-  }
+  },
+  //事件处理函数
+  bindViewTap: function () {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  goSpot: function () {
+    wx.navigateTo({
+      url: 'spot/spot',
+      success: function () {
+        clearInterval(inter);
+      }
+    })
+  },
+  goSaleCenter: function () {
+    wx.navigateTo({
+      url: '../salecenter/salecenter',
+    })
+  },
 })

@@ -25,7 +25,7 @@ App({
             method:'GET',
             header:{'content-type':'application/json'},
             success: function (openIdRes){
-              console.log("login success"+openIdRes.data.openid);
+              console.log("login success--"+openIdRes.data.openid);
               if(openIdRes.data.openid!=null&&openIdRes.data.openid!=undefined)
               {
                 self.globalData.openid = openIdRes.data.openid; 
@@ -33,20 +33,20 @@ App({
                 var userinfo = wx.getStorageSync(self.globalData.openid) || []
                 logs.unshift(Date.now())
                 wx.setStorageSync(self.globalData.openid, userinfo)
-                // 获取用户信息
+                // 获取用户设置
                 wx.getSetting({
                   success: res => {
                     if (res.authSetting['scope.userInfo']) {
                       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
                       wx.getUserInfo({
                         success: res => {
+                          console.log(res.userInfo);
                           // 可以将 res 发送给后台解码出 unionId
-                          this.globalData.userInfo = res.userInfo
-
+                          self.globalData.userInfo = res.userInfo;
                           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
                           // 所以此处加入 callback 以防止这种情况
-                          if (this.userInfoReadyCallback) {
-                            this.userInfoReadyCallback(res)
+                          if (self.userInfoReadyCallback) {
+                            self.userInfoReadyCallback(res)
                           }
                         }
                       })

@@ -13,9 +13,17 @@ page{
 .addForm{
   width: 100%;
 }
+.font24{
+  font-size: 24rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
+.txt-center{
+  text-align: center;
+}
 .input-group{
   width: 100%;
-  font-size: 28rpx;
 }
 .input-control{
   background: #fff;
@@ -41,10 +49,9 @@ page{
   border-top: 1rpx solid #eeeef7;
 }
 .confirm-btn button{
-   width: 670rpx;
+  width: 670rpx;
   height: 80rpx;
   border-radius: 40rpx;
-  font-size: 28rpx;
   line-height: 80rpx;
   background: -webkit-linear-gradient(#0092a6, #00b4c2)!important;
   color: #fff;

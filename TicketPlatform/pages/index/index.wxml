@@ -14,7 +14,7 @@
   </view>
   <!-- swiper end -->
   <!-- banner icon begin -->
-  <view class='bannerIcon'>
+  <view class='bannerIcon flex-row full-width txt-center font24'>
     <view class='iconLeft'>
     <view bindtap='goSpot'>
      <image src='../../images/{{bannerLeft}}'></image>
@@ -29,21 +29,21 @@
     </view>
   </view>
   <!-- banner icon end  -->
-  <view class='content'>
-    <view class='caption'>
+  <view class='content bg-white-color'>
+    <view class='caption font28'>
       <text class='leftLine'>—</text>
       <text class='centerFont'> 门票特卖 </text>
       <text class='rightLine'>—</text>
     </view>
     <!-- ticket dispaly begin -->
     <view class='ticketItem'>
-      <view class='item' wx:for="{{ticketItem}}" wx:key="unique">
+      <view class='item font24 bg-white-color' wx:for="{{ticketItem}}" wx:key="unique">
         <navigator url='ticketDetails/ticketDetails' open-type='navigate' hover-class>
           <view class='item-image'>
             <image src='../../images/{{item.imgUrl}}'></image>
           </view>
           <view class='item-text'>
-            <text class='item-title'>{{item.itemTitle}}\n</text>
+            <text class='item-title font28'>{{item.itemTitle}}\n</text>
             <text>￥</text>
             <text class='item-price'>{{item.itemPrice}}\t</text>
             <text>起\t</text>
@@ -52,9 +52,11 @@
         </navigator>
       </view>
     </view>
+    <!-- loading template -->
     <view class='{{isVisiable?"":"hide"}}'>
        <template is="loading" data='{{animationData,isShow}}'></template>
     </view>
   </view>
 </view>
-<template is="tabbar" data='{{tabbar,currentTab,root,rootPage}}'></template>
+<!-- tabbar -->
+<!-- <template is="tabbar" data='{{tabbar,currentTab,root,rootPage}}'></template> -->

@@ -15,13 +15,13 @@
     <view>日期区间</view>
     <view class='dateInput flex-row'>
       <view class='boder-wired spacing-padding'>
-        <input type='text' placeholder='开始时间'  bindtap='startDay' value='{{startdate||""}}' id="startdate"></input>
+        <input type='text' placeholder='开始时间'  bindtap='startDay' value='{{startdate||""}}' id="startdate" disabled='true'></input>
       </view>
       <view class='spacing-margin'> 
         至
       </view>
       <view class='boder-wired spacing-padding'>
-        <input type='text' placeholder='结束时间' bindtap='endDay' value='{{enddate||""}}' id='endDay'></input>
+        <input type='text' placeholder='结束时间' bindtap='endDay' value='{{enddate||""}}' id='endDay' disabled='true'></input>
       </view>
     </view>
   </view>

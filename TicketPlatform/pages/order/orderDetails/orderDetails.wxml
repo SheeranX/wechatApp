@@ -1,10 +1,10 @@
 <import src="../../common/tabbar.wxml"></import>
 <view class='container'>
-  <view class='caption'>
+  <view class='caption font28 txt-center'>
     <view class='title'>
       <text>订单查询结果</text>
     </view>
-    <view class='loginStatus'>
+    <view class='loginStatus font24 warning'>
       <text>未登录</text>
     </view>
   </view>
@@ -12,7 +12,7 @@
     <view class='orderID'>
       <text>订单编号\t</text>
       <text>185555555</text>
-      <text class='payStatus danger'>未支付</text>
+      <!-- <text class='payStatus danger'>未支付</text> -->
     </view>
     <view class='orderContent'>
       <view class='ticketImg'>
@@ -72,10 +72,10 @@
       </view>
     </view>
   </view>
-  <view class='noResult hide'>
+  <view class='noResult hide txt-center'>
     <view>
       <image src='../../../images/icon_none.png'></image>
-      <text>这里没有订单哦</text>
+      <text class='font28'>这里没有订单哦</text>
     </view>
   </view>
   <view class='loginBtn'>

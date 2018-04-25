@@ -5,6 +5,7 @@
       <text>提现时间</text>
     </view>
   </view>
+  <!-- 提现金额列表 -->
   <view class='result font24'>
     <view class='flex-row result-height btm-line'>
       <text class='black-color font28'>\t ￥1000</text>

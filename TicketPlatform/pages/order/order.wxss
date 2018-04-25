@@ -1,36 +1,15 @@
 /* pages/order/order.wxss */
 @import "../common/tabbar.wxss";
-checkbox .wx-checkbox-input{
-
-  border-radius: 50%;
-
-  height: 30rpx;
-
-  width: 30rpx;
-
-
- /* 自定义样式.... */
-
-}
-
-
-
-/* checkbox选中时样式 */
-
-checkbox .wx-checkbox-input.wx-checkbox-input-checked{
-
-  background-color: #fff;
-
-  border: 1rpx solid #fff;
-
-  /* 自定义样式.... */
-
-}
 .hide{
   display: none;
 }
 .container{
   background: #fff;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .switchTab{
   display: flex;
@@ -38,17 +17,22 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
   font-size: 24rpx;
   justify-content: center;
 }
-
+.font28{
+   font-size: 28rpx!important;
+}
+.font24{
+  font-size: 24rpx;
+}
+.txt-center{
+  text-align: center;
+}
 .caption{
   color: #666;
-  font-size: 28rpx;
   font-weight: bold;
   display: inline-block;
   padding-top: 30rpx;
 }
 .loginStatus{
-  font-size: 24rpx;
-  color: #ff9c00;
   text-align: right;
   position: absolute;
   top: 40rpx;
@@ -59,12 +43,10 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
   margin-top: 50rpx;
 }
 .byMobile{
-  width: 160rpx;
-  height: 50rpx;
-  font-size: 24rpx;
-  text-align: center;
-  line-height: 50rpx;
-  border-radius: 25rpx 0 0 25rpx;
+  width: 180rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 30rpx 0 0 30rpx;
   box-sizing: border-box;
 }
 .click{
@@ -73,16 +55,14 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
 }
 .unclick{
   background: #fff;
-  border: 1px solid #00a09a;
-  color: #00a09a;
+  border: 1px solid #00b8c5;
+  color: #00b8c5;
 }
 .byNumber{
-  width: 160rpx;
-  height: 50rpx;
-  font-size: 24rpx;
-  text-align: center;
-  line-height: 50rpx;
-  border-radius: 0 25rpx 25rpx 0;
+  width: 180rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 0 30rpx 30rpx 0;
   box-sizing: border-box;
 }
 .query{
@@ -96,24 +76,20 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
   height: 45rpx;
 }
 .query-flex{
-  display: flex;
-  flex-direction: row;
   border-bottom: 1px solid #c7c7c7;
   height: 100rpx;
-  align-items: center;
 }
 
 .query-flex input{
   padding-left:31rpx;
 }
 .messageBtn button{
-  height: 50rpx;
-  width: 185rpx;
-  font-size: 24rpx;
-  line-height: 50rpx;
+  height: 55rpx;
+  width: 200rpx;
+  line-height: 55rpx;
   text-align: center;
   background:-webkit-linear-gradient(left,#00b8c5,#008fa4);
-  border-radius: 25rpx;
+  border-radius: 30rpx;
   color: #fff;
   margin-right: 10rpx;
 }
@@ -134,7 +110,6 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
   width: 670rpx;
   height: 80rpx;
   border-radius: 40rpx;
-  font-size: 28rpx;
   line-height: 80rpx;
   background: -webkit-linear-gradient(#80c9d3, #80dae1);
   color: #fff;

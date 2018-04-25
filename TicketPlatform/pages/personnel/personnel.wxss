@@ -6,6 +6,12 @@ page{
 .bg-none{
   background: #fff;
 }
+.font28{
+  font-size: 28rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
 .flex-row{
   display: flex;
   flex-direction: row;
@@ -30,7 +36,6 @@ page{
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  font-size: 28rpx;
   text-align: center;
   color: #fff;
 }
@@ -46,7 +51,6 @@ page{
   background: #fff;
 }
 .menu-icon{
-  font-size: 24rpx;
   padding-top: 50rpx;
   padding-bottom: 50rpx;
   text-align: center;
@@ -54,29 +58,27 @@ page{
 .menu-icon image{
   width: 50rpx;
   height: 50rpx;
+  margin-bottom: 15rpx;
 }
 .personnel-icon{
   margin-right: 20rpx;
 }
 .personnel-icon image{
-  width: 50rpx;
-  height: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
   vertical-align: middle;
 }
 .personnel-sale{
-  font-size: 28rpx;
   background: #fff;
   padding-left: 40rpx;
   margin-top: 30rpx;
   height: 100rpx;
-
 }
 .personnel-setting{
-  font-size: 28rpx;
   background: #fff;
-   padding-left: 40rpx;
-    margin-top: 30rpx;
-    height: 100rpx;
+  padding-left: 40rpx;
+  margin-top: 30rpx;
+  height: 100rpx;
 }
 
 

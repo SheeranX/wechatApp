@@ -8,7 +8,8 @@ Page({
     currentTab:null,
     startDate:null,
     endDate:null,
-    dateType:null
+    dateType:null,
+    filtered:false
   },
   waitpay: function (e) {
     this.setData({

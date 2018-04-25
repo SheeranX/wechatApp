@@ -12,26 +12,26 @@
     </view>
   </view>
   <view class='personnel-menu flex-row'>
-    <view class='menu-icon' bindtap='waitPay'>
+    <view class='menu-icon font28' bindtap='waitPay'>
       <image src='../../images/icon_paid.png'></image>
       <view>
         待付款订单
       </view>
     </view>
-    <view class='menu-icon' bindtap='waitUse'>
+    <view class='menu-icon font28' bindtap='waitUse'>
       <image src='../../images/icon_pending_order.png'></image>
       <view>
         待使用订单
       </view>
     </view>
-    <view class='menu-icon' bindtap='historyOrder'>
+    <view class='menu-icon font28' bindtap='historyOrder'>
       <image src='../../images/icon_history_order.png'></image>
       <view>
         历史订单
       </view>
     </view>
   </view>
-  <view class='personnel-sale flex-row' bindtap='saleCenter'>
+  <view class='personnel-sale flex-row font28' bindtap='saleCenter'>
     <view class='personnel-icon'>
       <image src='../../images/icon_sale.png'></image>
     </view>
@@ -39,7 +39,7 @@
       分销中心
     </view>
   </view>
-  <view class='personnel-setting flex-row' bindtap='setting'>
+  <view class='personnel-setting flex-row font28' bindtap='setting'>
     <view class='personnel-icon'>
       <image src='../../images/icon_setting.png'></image>
     </view>
@@ -48,4 +48,4 @@
     </view>
   </view>
 </view>
-<template is="tabbar" data='{{tabbar,currentTab,root, rootPage}}'></template>
+<!-- <template is="tabbar" data='{{tabbar,currentTab,root, rootPage}}'></template> -->
